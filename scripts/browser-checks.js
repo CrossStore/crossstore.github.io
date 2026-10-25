@@ -68,6 +68,7 @@ async (page) => {
     check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `horizontal overflow at ${width}px`);
   }
   await page.locator('#apps').scrollIntoViewIfNeeded();
+  await page.locator('#screenshots').scrollIntoViewIfNeeded();
   await page.waitForFunction(() => Array.from(document.images).every(image => image.complete && image.naturalWidth > 0));
   await page.screenshot({ path: 'output/playwright/desktop-verified.png', fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 });

@@ -40,3 +40,5 @@ GitHub Pages must be enabled with **Source: GitHub Actions**. Pushing `main` run
 ## Credits
 
 Website source: MIT. Application artwork is copied from CrossStore; its original license is preserved in `public/CROSSSTORE-LICENSE.txt`. Dependency licenses are copied into the deployed `licenses/` folder. See `public/credits.html`.
+
+The screenshot gallery preserves original pixels. `public/screenshots/provenance.json` records each file's origin type, capture date, dimensions and hash. PaperMono application permissions and Waveshare AirTune are device framebuffer captures; 2048 and Gomoku are host previews rendered from actual Lua drawing commands, with approximate desktop typography. The page labels these separately.

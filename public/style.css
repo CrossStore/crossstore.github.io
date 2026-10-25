@@ -1235,6 +1235,89 @@ progress {
 .legal-page a {
   text-decoration: underline;
 }
+.gallery-section {
+  border-bottom: 1px solid var(--line);
+}
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.screenshot-card {
+  margin: 0;
+  min-width: 0;
+}
+.screenshot-image {
+  position: relative;
+  display: block;
+  border: 1px solid #c6cec1;
+  padding: 10px;
+  background: #fff;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 3px 0 #1e302b09;
+}
+.screenshot-image:hover {
+  border-color: var(--green);
+}
+.screenshot-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 5;
+  object-fit: contain;
+}
+.view-original {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fffffff5;
+  color: var(--ink);
+  font-size: 10px;
+}
+.capture-label {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--green);
+}
+.preview-label {
+  color: #756344;
+}
+.screenshot-card h3 {
+  margin: 9px 0;
+  font-size: 19px;
+}
+.screenshot-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.gallery-note {
+  margin: 27px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.gallery-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 1000px) {
+  .screenshot-grid { gap: 16px; }
+  .capture-label { font-size: 9px; }
+}
+@media (max-width: 760px) {
+  .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 27px 16px; }
+  .screenshot-image { padding: 7px; border-radius: 9px; }
+  .capture-label { margin-top: 13px; font-size: 10px; }
+  .screenshot-card h3 { font-size: 18px; }
+  .screenshot-card p { font-size: 12px; }
+  .view-original { right: 7px; bottom: 7px; font-size: 9px; padding: 5px 6px; }
+  .gallery-note { font-size: 11px; }
+}
 @media (min-width: 1500px) {
   .hero {
     min-height: 690px;

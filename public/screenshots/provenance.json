@@ -1,0 +1,42 @@
+[
+  {
+    "file": "app-permissions.png",
+    "kind": "device-framebuffer",
+    "device": "M5Stack PaperMono",
+    "capturedAt": "2026-10-23",
+    "width": 480,
+    "height": 800,
+    "sha256": "84958d951969a22864f73dbf2403f33ab8550dfc056093fe3cca452889aa6c3f",
+    "note": "Original device framebuffer capture; no pixel edits."
+  },
+  {
+    "file": "airtune-waveshare.png",
+    "kind": "device-framebuffer",
+    "device": "Waveshare ESP32-S3-ePaper-3.97",
+    "capturedAt": "2026-10-24",
+    "width": 480,
+    "height": 800,
+    "sha256": "147d439e9d3c6edd1aa14b8656a7ff175ecac3cedbd95a531f787a563ff48f4c",
+    "note": "Original device framebuffer capture; no pixel edits."
+  },
+  {
+    "file": "game2048-preview.png",
+    "kind": "lua-host-preview",
+    "device": null,
+    "capturedAt": "2026-10-23",
+    "width": 432,
+    "height": 640,
+    "sha256": "108a49526f96295d25585aaa0267af149f53042c70cc4ee78ee802fb609037cd",
+    "note": "Original capture; no pixel edits. Host preview fonts approximate device typography."
+  },
+  {
+    "file": "gomoku-preview.png",
+    "kind": "lua-host-preview",
+    "device": null,
+    "capturedAt": "2026-10-23",
+    "width": 432,
+    "height": 640,
+    "sha256": "cd1d12d433e8cdc30f68d1b6a924f4c902b4846d314bc0a4a2b470a75a7fc9f2",
+    "note": "Original capture; no pixel edits. Host preview fonts approximate device typography."
+  }
+]
