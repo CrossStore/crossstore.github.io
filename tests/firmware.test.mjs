@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash, webcrypto } from 'node:crypto';
 import { devices, validateRelease, verifyAsset, verifyDevice } from '../scripts/firmware.mjs';
-import { verifyDownload, flashManifest } from '../src/integrity.js';
+import { verifyDownload, flashManifest, issueLink } from '../src/integrity.js';
 
 const release = JSON.parse(await readFile(new URL('../firmware-release.json', import.meta.url)));
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 
-test('all three exact boards have complete, pinned public release assets', () => {
+test('all four exact boards have complete, pinned public release assets', () => {
   validateRelease(release);
-  assert.equal(devices.length, 3);
+  assert.equal(devices.length, 4);
   for (const device of devices) {
     for (const suffix of ['full-install.bin', 'firmware.bin', 'bootloader.bin', 'partitions.bin', 'boot_app0.bin', 'install-manifest.json']) {
       assert.equal(release.assets.filter(a => a.name === `${device.id}-${suffix}`).length, 1);
@@ -38,18 +38,19 @@ test('build and browser both reject truncated or modified firmware', async () =>
   }
 });
 
-function fixture() {
-  const device = devices[0];
+function fixture(device = devices[0]) {
   const files = new Map();
-  const full = Buffer.alloc(65540, 0xff);
-  const parts = [['bootloader', 'bootloader.bin', 0], ['partitions', 'partitions.bin', 32768], ['boot_app0', 'boot_app0.bin', 57344], ['firmware', 'firmware.bin', 65536]].map(([role, suffix, offset]) => {
-    const bytes = Buffer.from([0xe9, 1, 2, 3]);
+  const full = Buffer.alloc(65560, 0xff);
+  const parts = [['bootloader', 'bootloader.bin', device.bootloaderOffset], ['partitions', 'partitions.bin', 32768], ['boot_app0', 'boot_app0.bin', 57344], ['firmware', 'firmware.bin', 65536]].map(([role, suffix, offset]) => {
+    const bytes = Buffer.alloc(24);
+    bytes[0] = 0xe9; bytes[3] = device.flashFrequency === '40m' ? 0x40 : 0x4f;
+    bytes.writeUInt16LE(device.chipId, 12);
     bytes.copy(full, offset); files.set(`${device.id}-${suffix}`, bytes);
     return { name: `${device.id}-${suffix}`, role, offset, size: bytes.length, sha256: sha256(bytes) };
   });
   files.set(`${device.id}-full-install.bin`, full);
   parts.push({ name: `${device.id}-full-install.bin`, role: 'full_install', offset: 0, size: full.length, sha256: sha256(full) });
-  const manifest = { deviceSlug: device.id, targetId: device.targetId, chip: 'ESP32-S3', flash: { size: 16777216 }, appStore: true, crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
+  const manifest = { deviceSlug: device.id, targetId: device.targetId, chip: device.chip, flash: { size: 16777216, frequency: device.flashFrequency }, appStore: true, crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
   const save = () => files.set(`${device.id}-install-manifest.json`, Buffer.from(JSON.stringify(manifest)));
   save(); return { device, files, manifest, save };
 }
@@ -71,8 +72,38 @@ test('block mixed-board, wrong-offset, stale-source and incomplete manifests', (
 test('web flashing uses only verified local blob at full-image offset zero', () => {
   for (const d of devices) {
     const manifest = flashManifest(d, 'blob:https://crossstore.github.io/verified');
-    assert.deepEqual(manifest.builds, [{ chipFamily: 'ESP32-S3', parts: [{ path: 'blob:https://crossstore.github.io/verified', offset: 0 }] }]);
+    assert.deepEqual(manifest.builds, [{ chipFamily: d.chip, parts: [{ path: 'blob:https://crossstore.github.io/verified', offset: 0 }] }]);
     assert.throws(() => flashManifest(d, 'https://example.com/unverified.bin'));
   }
   assert.throws(() => flashManifest({ id: 'esp32-c3' }, 'blob:wrong'));
+});
+
+
+test('classic ESP32 boot offset, chip and frequency cannot be confused with S3', () => {
+  const device = devices.find(d => d.id === 'm5paper-v11');
+  verifyDevice(device, release, fixture(device).files);
+  for (const change of [m => m.chip = 'ESP32-S3', m => m.assets[0].offset = 0, m => m.flash.frequency = '80m']) {
+    const f = fixture(device); change(f.manifest); f.save();
+    assert.throws(() => verifyDevice(device, release, f.files));
+  }
+  for (const [position, value] of [[0, 0xe9], [4096 + 12, 9], [4096 + 3, 0x4f]]) {
+    const f = fixture(device);
+    const full = f.files.get(`${device.id}-full-install.bin`); full[position] = value;
+    const boot = f.files.get(`${device.id}-bootloader.bin`);
+    if (position >= 4096) boot[position - 4096] = value;
+    for (const a of f.manifest.assets) a.sha256 = sha256(f.files.get(a.name));
+    f.save(); assert.throws(() => verifyDevice(device, release, f.files), /Invalid/);
+  }
+  assert.throws(() => flashManifest({ ...device, chip: 'ESP32-S3' }, 'blob:verified'));
+});
+
+
+test('issue links include the selected model, alpha status and immutable source', () => {
+  const device = { ...devices.find(d => d.id === 'm5paper-v11'), version: 'test+1' };
+  const url = new URL(issueLink(device, release));
+  assert.equal(url.origin, 'https://github.com');
+  assert.equal(url.pathname, '/zhuzhe1983/crossmux/issues/new');
+  assert.match(url.searchParams.get('title'), /Alpha.*M5Paper v1.1/);
+  const body = url.searchParams.get('body');
+  for (const value of [device.model, device.version, release.sourceSha, release.sdkSha, '未经实机测试']) assert.ok(body.includes(value));
 });

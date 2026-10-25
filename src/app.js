@@ -1,6 +1,6 @@
-import { verifyDownload, flashManifest } from './integrity.js';
+import { verifyDownload, flashManifest, issueLink } from './integrity.js';
 
-const { models } = JSON.parse(document.querySelector('#site-data').textContent);
+const { models, release } = JSON.parse(document.querySelector('#site-data').textContent);
 const $ = id => document.getElementById(id);
 const supported = window.isSecureContext && 'serial' in navigator;
 let model, verifiedUrl, flashFunction, request, generation = 0, busy = false;
@@ -28,7 +28,8 @@ document.querySelectorAll('input[name="device"]').forEach(input => input.addEven
   resetPrepared();
   $('selected-name').textContent = model.model;
   $('selected-note').textContent = model.note;
-  $('ack-label').textContent = `我确认设备是 ${model.model}，已备份并同意清除设备内部的原固件和设置。`;
+  $('report-issue').href = issueLink(model, release);
+  $('ack-label').textContent = `我确认设备是 ${model.model}${model.experimental ? '，理解此固件尚未实机验证' : ''}，已备份并同意清除设备内部的原固件和设置。`;
   $('firmware-version').textContent = model.version;
   $('firmware-size').textContent = `${(model.bytes / 1024 / 1024).toFixed(2)} MiB`;
   $('firmware-facts').hidden = false;

@@ -14,9 +14,12 @@ async (page) => {
       requestPort: async () => { window.serialRequests++; throw new DOMException('Canceled', 'NotFoundError'); },
     }});
   });
-  for (const id of ['papermono', 'papers3', 'waveshare-epaper-397']) {
+  for (const id of ['papermono', 'papers3', 'waveshare-epaper-397', 'm5paper-v11']) {
     await page.locator(`input[value="${id}"]`).check();
     check(await page.locator('#prepare').isDisabled(), 'model change must require confirmation');
+    const report = new URL(await page.locator('#report-issue').getAttribute('href'));
+    check(report.pathname === '/zhuzhe1983/crossmux/issues/new' && report.searchParams.get('body').includes(await page.locator('#selected-name').textContent()), 'report link must carry selected model');
+    if (id === 'm5paper-v11') check((await page.locator('#ack-label').textContent()).includes('尚未实机验证'), 'experimental confirmation missing');
     await page.locator('#acknowledge').check();
     await page.locator('#prepare').click();
     await page.waitForFunction(() => !document.querySelector('#connect').hidden, null, { timeout: 30000 });
@@ -90,5 +93,5 @@ async (page) => {
     check(await unsupported.locator('#prepare').isDisabled(), 'unsupported browser cannot download-and-flash');
     check(await unsupported.locator('#download-details').isVisible(), 'unsupported browser needs manual download');
   } finally { await context.close(); }
-  return 'PASS: 3 firmware downloads, confirmation/reset, canceled chooser, corrupt download, stale request, 5 widths, all icons, unsupported browser; no physical USB used.';
+  return 'PASS: 4 firmware downloads, confirmation/reset, canceled chooser, corrupt download, stale request, 5 widths, all icons, unsupported browser; no physical USB used.';
 }

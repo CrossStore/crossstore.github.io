@@ -5,6 +5,30 @@ export async function verifyDownload(buffer, asset, subtle = globalThis.crypto.s
 }
 
 export function flashManifest(model, blobUrl) {
-  if (!['papermono', 'papers3', 'waveshare-epaper-397'].includes(model.id) || !blobUrl.startsWith('blob:')) throw new Error('无效的刷写目标');
-  return { name: `CrossStore · ${model.model}`, version: model.version, builds: [{ chipFamily: 'ESP32-S3', parts: [{ path: blobUrl, offset: 0 }] }] };
+  const chips = { papermono: 'ESP32-S3', papers3: 'ESP32-S3', 'waveshare-epaper-397': 'ESP32-S3', 'm5paper-v11': 'ESP32' };
+  if (!Object.hasOwn(chips, model.id) || model.chip !== chips[model.id] || !blobUrl.startsWith('blob:')) throw new Error('无效的刷写目标');
+  return { name: `CrossStore · ${model.model}`, version: model.version, builds: [{ chipFamily: chips[model.id], parts: [{ path: blobUrl, offset: 0 }] }] };
+}
+
+export function issueLink(model, release) {
+  const params = new URLSearchParams({
+    title: `[${model.experimental ? 'Alpha' : 'Bug'}][${model.model}] 请填写问题摘要`,
+    body: `设备 / Model: ${model.model}
+验证状态: ${model.experimental ? 'Alpha，未经实机测试' : '已有实机测试记录'}
+固件 / Firmware: ${model.version}
+CrossMux: ${release.sourceSha}
+SDK: ${release.sdkSha}
+Release: ${release.releaseUrl}
+
+复现步骤 / Steps:
+1.
+
+预期表现 / Expected:
+
+实际表现 / Actual:
+
+日志或照片 / Logs or photos:
+`,
+  });
+  return `https://github.com/zhuzhe1983/crossmux/issues/new?${params}`;
 }

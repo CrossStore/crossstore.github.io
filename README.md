@@ -19,7 +19,7 @@ Open http://localhost:4173 in a desktop Chromium browser. Web Serial requires HT
 
 ## Firmware policy
 
-- Only M5Stack PaperMono, M5Stack PaperS3 and Waveshare ESP32-S3-ePaper-3.97 are offered. All are ESP32-S3 with 16 MiB flash. Chip detection cannot distinguish their board wiring: users must select and confirm their exact model.
+- M5Stack PaperMono, M5Stack PaperS3, Waveshare ESP32-S3-ePaper-3.97 and experimental M5Paper v1.1 are offered. The first three use ESP32-S3; M5Paper v1.1 uses classic ESP32. All have 16 MiB flash. M5Paper has no physical validation: the card and confirmation explicitly state this. Its merged image has an erased 0x1000 prefix and an ESP32 bootloader at 0x1000, retaining 40 MHz Flash; S3 starts at 0x0 with 80 MHz. Build validation and Web Serial chip-family checks enforce the distinction. Chip detection cannot distinguish their board wiring: users must select and confirm their exact model.
 - `firmware-release.json` pins public release URLs, source / SDK commits, sizes and hashes. Updating this file is a reviewed source change, not a dynamic “latest” fetch.
 - Build verification cross-checks original install manifests, all part hashes, offsets, board IDs, flash size and source commits. Each full image must contain the exact release bootloader, partitions, OTA initialization data and application. Image headers are left unchanged.
 - Browser download is verified again with SHA-256 before a Blob URL can reach the flash transport. Selection or confirmation changes invalidate prepared images; obsolete downloads cannot re-enable flashing.

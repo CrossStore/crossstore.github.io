@@ -565,7 +565,7 @@ legend.step-legend {
 }
 .device-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   clear: both;
 }
@@ -1548,6 +1548,7 @@ progress {
     font-size: 13px;
   }
   .device-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
   }
   .device-card {
@@ -1847,3 +1848,8 @@ progress {
     overflow: hidden;
   }
 }
+
+.tested.experimental { color: #865c22; }
+.tested.experimental:before { background: #a37332; }
+
+.report-issue { display: inline-block; margin: 0 0 18px; color: var(--green); text-underline-offset: 4px; }
