@@ -40,6 +40,36 @@ document.querySelectorAll('input[name="device"]').forEach(input => input.addEven
   setStatus(supported ? '请确认型号与备份，再下载固件。' : '已显示该机型的下载文件，可使用本地刷机工具。');
 }));
 
+const initialSelectionNote = $('selected-note').textContent;
+const filterButtons = [...document.querySelectorAll('[data-brand-filter]')];
+const deviceCards = [...document.querySelectorAll('.device-card, .pending-device')];
+filterButtons.forEach(button => button.addEventListener('click', () => {
+  if (busy) return;
+  const brand = button.dataset.brandFilter;
+  for (const tab of filterButtons) tab.setAttribute('aria-pressed', String(tab === button));
+  for (const card of deviceCards) card.hidden = !!brand && card.dataset.brand !== brand;
+  const available = deviceCards.filter(card => !card.hidden && card.classList.contains('device-card')).length;
+  const pending = deviceCards.filter(card => !card.hidden && card.classList.contains('pending-device')).length;
+  $('filter-summary').textContent = `${brand || '全部品牌'} · ${available} 个固件${pending ? ` · ${pending} 款待适配` : ''}`;
+  // A hidden choice must not leave an armed image or an old request behind.
+  if (model && brand && model.brand !== brand) {
+    document.querySelector('input[name="device"]:checked').checked = false;
+    model = undefined;
+    $('acknowledge').checked = false;
+    $('acknowledge').disabled = true;
+    resetPrepared();
+    $('selected-name').textContent = '先选择你的设备';
+    $('selected-note').textContent = initialSelectionNote;
+    $('report-issue').href = 'https://github.com/zhuzhe1983/crossmux/issues/new';
+    $('ack-label').textContent = '我已核对型号，并了解完整刷写的影响。';
+    $('firmware-facts').hidden = true;
+    $('download-details').hidden = true;
+    $('full-download').removeAttribute('href');
+    $('app-download').removeAttribute('href');
+    setStatus('请选择该品牌的具体型号，再确认下载。');
+  }
+}));
+
 $('acknowledge').addEventListener('change', () => {
   resetPrepared();
   setStatus($('acknowledge').checked ? '已确认。下一步下载并校验固件，尚不会连接设备。' : '请确认型号与备份，再下载固件。');

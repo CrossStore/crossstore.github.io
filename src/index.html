@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CrossStore — 给墨水屏，多一点可能</title>
-  <meta name="description" content="为 CrossMux 打造的开源 Lua 应用商店。通过浏览器为 PaperMono、PaperS3、Waveshare 3.97 刷入商店版固件，让墨水屏上的应用随装随用。">
+  <meta name="description" content="为 CrossMux 打造的开源 Lua 应用商店。按品牌选择墨水屏设备，通过浏览器刷入商店版固件。提供实测状态、Alpha 机型说明与问题反馈入口。">
   <meta name="theme-color" content="#f6f5ef"><link rel="canonical" href="https://crossstore.github.io/">
   <meta property="og:title" content="CrossStore — 给墨水屏，多一点可能">
   <meta property="og:description" content="阅读之外，装点新可能。开源应用商店与多款墨水屏设备的网页刷机工具。">
@@ -54,13 +54,20 @@
 
   <section class="section wrap" id="flash" aria-labelledby="flash-title">
     <div class="section-heading"><div><p class="eyebrow">01 / GET STARTED</p><h2 id="flash-title">选好设备，接上 USB。</h2></div><p>不用安装刷机软件。<br>在桌面版 Chrome 或 Edge 中完成。</p></div>
-    <div class="preview-note"><span class="pill">开发预览版</span><p>以下机型已做过基础实机验证，功能仍在完善。当前公开构建 <a href="{{RELEASE_URL}}"><code>{{SHORT_SHA}}</code> ↗</a>，不代表每个发布镜像的所有功能均已验收。</p></div>
+    <div class="preview-note"><span class="pill">开发预览版</span><p>各机型的实测状态见下方标记。当前公开构建 <a href="{{RELEASE_URL}}"><code>{{SHORT_SHA}}</code> ↗</a>，不代表每个发布镜像的所有功能均已验收。</p></div>
     <form id="flasher" novalidate>
-      <fieldset id="device-choices"><legend class="step-legend"><span>1</span>选择设备型号</legend><div class="device-grid">{{DEVICES}}</div></fieldset>
+      <fieldset id="device-choices">
+        <legend class="step-legend"><span>1</span>选择设备型号</legend>
+        <div class="brand-filters" role="group" aria-label="按品牌筛选固件">{{BRAND_FILTERS}}</div>
+        <p id="filter-summary" class="filter-summary" role="status" aria-live="polite">{{FILTER_SUMMARY}}</p>
+        <div class="device-grid">{{DEVICES}}</div>
+      </fieldset>
+      <p class="alpha-note">PaperMono、PaperS3、Waveshare 3.97 有本站维护者的实机测试记录；其余可刷机型均为 Alpha，尚未实机测试。当前版本的测试状态和限制请查看机型说明与 Release。</p>
+      <div class="pending-devices">{{PENDING_DEVICES}}</div>
       <div class="flasher-panel">
         <div class="flash-information">
           <p class="eyebrow">CROSSSTORE WEB FLASHER</p><h3 id="selected-name">先选择你的设备</h3>
-          <p id="selected-note">请核对设备外壳或包装上的完整型号。M5Paper v1.1 使用老款 ESP32，其余三款使用 ESP32-S3；浏览器不能自动识别同芯片的不同板型。</p>
+          <p id="selected-note">请核对设备外壳或包装上的完整型号。机型之间的芯片、屏幕和引脚不同；浏览器只能核对芯片类型，无法自动识别同芯片的不同板型。</p>
           <a id="report-issue" class="report-issue" href="https://github.com/zhuzhe1983/crossmux/issues/new" target="_blank" rel="noopener">提交问题 ↗</a>
           <dl class="firmware-facts" id="firmware-facts" hidden><div><dt>固件</dt><dd id="firmware-version"></dd></div><div><dt>大小</dt><dd id="firmware-size"></dd></div><div><dt>方式</dt><dd>完整刷写 · 0x0</dd></div></dl>
           <details class="download-details" id="download-details" hidden><summary>下载文件 / 查看校验值</summary><a id="full-download" download>下载完整镜像 .bin ↗</a><a id="app-download" download>下载应用固件 .bin ↗</a><p>应用固件供已有兼容分区布局的同型号设备更新使用；首次安装请用完整镜像。手动刷写前请阅读发布说明。</p><a href="{{RELEASE_URL}}">发布说明与全部文件 ↗</a><small>完整镜像 SHA-256</small><code id="checksum"></code></details>

@@ -2,15 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash, webcrypto } from 'node:crypto';
-import { devices, validateRelease, verifyAsset, verifyDevice } from '../scripts/firmware.mjs';
+import { devices, pendingDevices, validateRelease, verifyAsset, verifyDevice } from '../scripts/firmware.mjs';
 import { verifyDownload, flashManifest, issueLink } from '../src/integrity.js';
 
 const release = JSON.parse(await readFile(new URL('../firmware-release.json', import.meta.url)));
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 
-test('all four exact boards have complete, pinned public release assets', () => {
+test('all integrated boards have complete, pinned public release assets', () => {
   validateRelease(release);
-  assert.equal(devices.length, 4);
+  assert.equal(devices.length, 13);
   for (const device of devices) {
     for (const suffix of ['full-install.bin', 'firmware.bin', 'bootloader.bin', 'partitions.bin', 'boot_app0.bin', 'install-manifest.json']) {
       assert.equal(release.assets.filter(a => a.name === `${device.id}-${suffix}`).length, 1);
@@ -50,7 +50,7 @@ function fixture(device = devices[0]) {
   });
   files.set(`${device.id}-full-install.bin`, full);
   parts.push({ name: `${device.id}-full-install.bin`, role: 'full_install', offset: 0, size: full.length, sha256: sha256(full) });
-  const manifest = { deviceSlug: device.id, targetId: device.targetId, chip: device.chip, flash: { size: 16777216, frequency: device.flashFrequency }, appStore: true, crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
+  const manifest = { deviceSlug: device.id, targetId: device.targetId, chip: device.chip, flash: { size: 16777216, frequency: device.flashFrequency }, appStore: true, validationStatus: device.experimental ? 'alpha-unverified' : 'prior-hardware-record', crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
   const save = () => files.set(`${device.id}-install-manifest.json`, Buffer.from(JSON.stringify(manifest)));
   save(); return { device, files, manifest, save };
 }
@@ -106,4 +106,16 @@ test('issue links include the selected model, alpha status and immutable source'
   assert.match(url.searchParams.get('title'), /Alpha.*M5Paper v1.1/);
   const body = url.searchParams.get('body');
   for (const value of [device.model, device.version, release.sourceSha, release.sdkSha, '未经实机测试']) assert.ok(body.includes(value));
+});
+
+
+test('pending Ink4 Plus cannot enter flash transport, and alpha labels cannot be promoted', () => {
+  for (const d of pendingDevices) {
+    assert.throws(() => flashManifest(d, 'blob:unavailable'));
+    assert.match(new URL(issueLink(d, release)).searchParams.get('body'), /待适配，暂无可刷写固件/);
+  }
+  const d = devices.find(d => d.id === 'xteink');
+  const f = fixture(d); verifyDevice(d, release, f.files);
+  f.manifest.validationStatus = 'prior-hardware-record'; f.save();
+  assert.throws(() => verifyDevice(d, release, f.files), /incompatible/);
 });

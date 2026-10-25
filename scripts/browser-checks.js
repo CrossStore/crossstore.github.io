@@ -14,7 +14,19 @@ async (page) => {
       requestPort: async () => { window.serialRequests++; throw new DOMException('Canceled', 'NotFoundError'); },
     }});
   });
-  for (const id of ['papermono', 'papers3', 'waveshare-epaper-397', 'm5paper-v11']) {
+  const ids = await page.locator('input[name="device"]').evaluateAll(nodes => nodes.map(n => n.value));
+  check(ids.length === 13, 'all integrated images must be offered');
+  check(await page.locator('.pending-device input').count() === 0, 'pending device must not be selectable for flashing');
+  const brands = await page.locator('[data-brand-filter]').evaluateAll(nodes => nodes.map(n => n.dataset.brandFilter));
+  check(brands[0] === '', 'default filter must be All');
+  for (const brand of brands) {
+    await page.locator(`[data-brand-filter="${brand}"]`).click();
+    const shown = await page.locator('.device-card:visible, .pending-device:visible').evaluateAll(nodes => nodes.map(n => n.dataset.brand));
+    check(shown.length > 0 && shown.every(value => !brand || value === brand), `wrong cards for ${brand}`);
+    check(await page.locator('[data-brand-filter][aria-pressed="true"]').count() === 1, 'exactly one active brand');
+  }
+  await page.locator('[data-brand-filter=""]').click();
+  for (const id of ids) {
     await page.locator(`input[value="${id}"]`).check();
     check(await page.locator('#prepare').isDisabled(), 'model change must require confirmation');
     const report = new URL(await page.locator('#report-issue').getAttribute('href'));
@@ -31,6 +43,13 @@ async (page) => {
   await page.waitForFunction(() => document.querySelector('#flash-status').textContent.includes('已取消'));
   check(await page.evaluate(() => window.serialRequests) === 1, 'chooser must be called only by connect gesture');
   check(await page.locator('#connect').isEnabled(), 'cancel must allow retry');
+  await page.locator('[data-brand-filter="M5STACK"]').click();
+  check(await page.locator('input[name="device"]:checked').count() === 0, 'hidden model selection must clear');
+  check(await page.locator('#connect').isHidden() && await page.locator('#prepare').isDisabled(), 'hidden model cannot remain armed');
+  check(await page.locator('#download-details').isHidden(), 'hidden model download links must clear');
+  await page.locator('[data-brand-filter=""]').click();
+  await page.locator('input[value="papermono"]').check();
+  await page.locator('#acknowledge').check();
   await page.locator('#acknowledge').uncheck();
   check(await page.locator('#connect').isHidden(), 'unconfirm must invalidate verified firmware');
 
@@ -58,12 +77,15 @@ async (page) => {
   });
   await page.locator('#prepare').click();
   await waiting;
-  await page.locator('input[value="papers3"]').check();
+  await page.locator('[data-brand-filter="WAVESHARE"]').click();
   releaseDownload();
   await page.unroute('**/firmware/papermono-full-install.bin');
   check(await page.locator('#connect').isHidden(), 'stale download must not expose connect');
   check(await page.locator('#prepare').isDisabled(), 'new model must still require confirmation');
-  check((await page.locator('#selected-name').textContent()).includes('PaperS3'), 'selection must stay current');
+  check(await page.locator('input[name="device"]:checked').count() === 0, 'filter must invalidate in-flight download selection');
+  await page.locator('input[value="waveshare-epaper-397"]').check();
+  await page.locator('[data-brand-filter=""]').click();
+  check((await page.locator('#selected-name').textContent()).includes('Waveshare'), 'returning to All preserves a visible selection');
 
   await page.goto(base);
   for (const width of [320, 390, 768, 1024, 1440]) {
@@ -75,6 +97,12 @@ async (page) => {
   await page.waitForFunction(() => Array.from(document.images).every(image => image.complete && image.naturalWidth > 0));
   await page.screenshot({ path: 'output/playwright/desktop-verified.png', fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('[data-brand-filter="M5STACK"]').click();
+  await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-filter-mobile.png' });
+  await page.locator('[data-brand-filter="METALIO"]').click();
+  check(await page.locator('.pending-device').isVisible(), 'pending Ink4 Plus must follow its brand on mobile');
+  await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-filter-metalio.png' });
+  await page.locator('[data-brand-filter=""]').click();
   await page.screenshot({ path: 'output/playwright/mobile-verified.png', fullPage: true });
   check(errors.length === 0, `uncaught page errors: ${errors.join(', ')}`);
 
@@ -93,5 +121,5 @@ async (page) => {
     check(await unsupported.locator('#prepare').isDisabled(), 'unsupported browser cannot download-and-flash');
     check(await unsupported.locator('#download-details').isVisible(), 'unsupported browser needs manual download');
   } finally { await context.close(); }
-  return 'PASS: 4 firmware downloads, confirmation/reset, canceled chooser, corrupt download, stale request, 5 widths, all icons, unsupported browser; no physical USB used.';
+  return 'PASS: brand filters + selection/download reset, 13 firmware downloads, canceled chooser, corrupt download, stale request, 5 widths, all icons, unsupported browser; no physical USB used.';
 }
