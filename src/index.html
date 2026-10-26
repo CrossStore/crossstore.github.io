@@ -57,14 +57,17 @@
     <div class="preview-note"><span class="pill">开发预览版</span><p>各机型的实测状态见下方标记。当前公开构建 <a href="{{RELEASE_URL}}"><code>{{SHORT_SHA}}</code> ↗</a>，不代表每个发布镜像的所有功能均已验收。</p></div>
     <form id="flasher" novalidate>
       <fieldset id="device-choices">
-        <legend class="step-legend"><span>1</span>选择设备型号</legend>
-        <div class="brand-filters" role="group" aria-label="按品牌筛选固件">{{BRAND_FILTERS}}</div>
-        <p id="filter-summary" class="filter-summary" role="status" aria-live="polite">{{FILTER_SUMMARY}}</p>
-        <div class="device-grid">{{DEVICES}}</div>
+        <legend class="step-legend"><span>1</span>选择品牌</legend>
+        <div class="brand-filters" role="group" aria-label="选择设备品牌">{{BRAND_FILTERS}}</div>
+        <p id="filter-summary" class="filter-summary" role="status" aria-live="polite">先选择品牌，再查看对应型号。</p>
+        <div id="model-options" hidden>
+          <p class="step-legend"><span>2</span>选择设备型号</p>
+          <div class="device-grid">{{DEVICES}}</div>
+          <div class="pending-devices">{{PENDING_DEVICES}}</div>
+          <p class="alpha-note">实测范围与限制请查看机型说明。Alpha 机型仍需进一步验证；遇到问题可通过下方入口反馈。</p>
+        </div>
       </fieldset>
-      <p class="alpha-note">PaperMono、PaperS3、Waveshare 3.97 有本站维护者的实机测试记录；初代 M5Paper 有基础实测记录，与 v1.1 共用固件，v1.1 未实机测试。M5Paper 系列及其余可刷机型仍为 Alpha，详细范围见机型说明。当前版本的测试状态和限制请查看机型说明与 Release。</p>
-      <div class="pending-devices">{{PENDING_DEVICES}}</div>
-      <div class="flasher-panel">
+      <div class="flasher-panel" id="flasher-panel" hidden>
         <div class="flash-information">
           <p class="eyebrow">CROSSSTORE WEB FLASHER</p><h3 id="selected-name">先选择你的设备</h3>
           <p id="selected-note">请核对设备外壳或包装上的完整型号。机型之间的芯片、屏幕和引脚不同；浏览器只能核对芯片类型，无法自动识别同芯片的不同板型。</p>
@@ -73,7 +76,7 @@
           <details class="download-details" id="download-details" hidden><summary>下载文件 / 查看校验值</summary><a id="full-download" download>下载完整镜像 .bin ↗</a><a id="app-download" download>下载应用固件 .bin ↗</a><p>应用固件供已有兼容分区布局的同型号设备更新使用；首次安装请用完整镜像。手动刷写前请阅读发布说明。</p><a href="{{RELEASE_URL}}">发布说明与全部文件 ↗</a><small>完整镜像 SHA-256</small><code id="checksum"></code></details>
         </div>
         <div class="flash-controls">
-          <p class="step-legend"><span>2</span>准备与确认</p>
+          <p class="step-legend"><span>3</span>准备与确认</p>
           <p class="flash-warning"><strong>这是完整刷写，会清除设备内部的原固件和设置。</strong>请先备份。TF 卡不会被刷写，仍建议备份书籍与应用数据，并在启动前插好 FAT32 格式的 TF 卡。</p>
           <label class="check-row"><input type="checkbox" id="acknowledge" disabled><span id="ack-label">我已核对型号，并了解完整刷写的影响。</span></label>
           <p class="browser-note" id="browser-note">正在检查浏览器是否支持 USB 刷写…</p>

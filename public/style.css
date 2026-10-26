@@ -588,10 +588,6 @@ legend.step-legend {
 .brand-filter:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 .brand-filter:disabled { opacity: .5; cursor: default; }
 .filter-summary { margin: 14px 0 18px; font-size: 12px; color: var(--muted); }
-@media (max-width: 760px) {
-  .brand-filters { flex-wrap: nowrap; overflow-x: auto; padding: 4px 3px 10px; }
-  .brand-filter { flex: 0 0 auto; }
-}
 .device-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

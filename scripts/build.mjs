@@ -51,20 +51,19 @@ const apps = [
 const icon = (id, cls = '') => `<img class="${cls}" src="/assets/apps/${id}.png" width="64" height="64" alt="" loading="lazy">`;
 let html = await readFile('src/index.html', 'utf8');
 const brands = [...new Set([...models, ...pendingDevices].map(d => d.brand))];
-html = html.replace('{{FILTER_SUMMARY}}', `全部品牌 · ${models.length} 个固件${pendingDevices.length ? ` · ${pendingDevices.length} 款待适配` : ''}`);
-html = html.replace('{{BRAND_FILTERS}}', ['', ...brands].map(brand => {
-  const count = models.filter(d => !brand || d.brand === brand).length;
-  return `<button type="button" class="brand-filter" data-brand-filter="${brand}" aria-pressed="${!brand}">${brand || '全部'}<span>${count}</span></button>`;
+html = html.replace('{{BRAND_FILTERS}}', brands.map(brand => {
+  const count = models.filter(d => d.brand === brand).length;
+  return `<button type="button" class="brand-filter" data-brand-filter="${brand}" aria-pressed="false" aria-controls="model-options">${brand}<span>${count}</span></button>`;
 }).join(''));
 html = html.replace('{{DEVICES}}', models.map(d => `
-  <label class="device-card" data-brand="${d.brand}">
+  <label class="device-card" data-brand="${d.brand}" hidden>
     <input type="radio" name="device" value="${d.id}">
     <span class="selection-mark" aria-hidden="true"></span>
     <span class="device-art ${d.type}" aria-hidden="true"><span class="mini-screen"><span>CrossStore</span><span class="mini-icons">${icon('appstore')}${icon('game2048')}${icon('airtune')}${icon('weread')}</span><i></i><i></i></span><span class="device-keys">•••</span></span>
     <span class="brand">${d.brand}</span><span class="device-name">${d.name}</span>
     <span class="device-spec">${d.screen}</span><span class="tested${d.experimental ? ' experimental' : ''}">${d.validationLabel || (d.experimental ? 'Alpha · 未实机测试' : '已有实机测试记录')}</span>
   </label>`).join(''));
-html = html.replace('{{PENDING_DEVICES}}', pendingDevices.map(d => `<article class="pending-device" data-brand="${d.brand}"><div><span class="pill">待适配 · 尚无固件</span><h3>${d.name}</h3><p>${d.note}</p></div><a href="${issueLink(d, release).replaceAll('&', '&amp;')}" target="_blank" rel="noopener">提供硬件信息 / 提交问题 ↗</a></article>`).join(''));
+html = html.replace('{{PENDING_DEVICES}}', pendingDevices.map(d => `<article class="pending-device" data-brand="${d.brand}" hidden><div><span class="pill">待适配 · 尚无固件</span><h3>${d.name}</h3><p>${d.note}</p></div><a href="${issueLink(d, release).replaceAll('&', '&amp;')}" target="_blank" rel="noopener">提供硬件信息 / 提交问题 ↗</a></article>`).join(''));
 html = html.replace('{{APPS}}', apps.map(([id, name, text]) => `<a class="app-card" href="https://github.com/CrossStore/CrossStore/tree/main/packages/${id}">${icon(id)}<span><strong>${name}</strong><small>${text}</small></span><span class="app-arrow" aria-hidden="true">↗</span></a>`).join(''));
 html = html.replaceAll('{{RELEASE_URL}}', release.releaseUrl).replaceAll('{{SHORT_SHA}}', release.sourceSha.slice(0, 7));
 html = html.replace('{{DATA}}', JSON.stringify({ models, release }).replaceAll('<', '\\u003c'));

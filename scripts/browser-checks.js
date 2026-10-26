@@ -7,6 +7,9 @@ async (page) => {
   await page.waitForFunction(() => !document.querySelector('#browser-note').textContent.includes('正在检查'));
   check(await page.locator('#prepare').isDisabled(), 'initial flash button must be disabled');
   check(await page.locator('#connect').isHidden(), 'no serial access before verification');
+  check(await page.locator('#model-options').isHidden(), 'models must stay collapsed until brand selection');
+  check(await page.locator('.device-card:visible, .pending-device:visible').count() === 0, 'initial view must not show products');
+  check(await page.locator('#flasher-panel').isHidden(), 'confirmation must wait for a model');
   // Mock cancellation of the chooser. Never access a physical USB device in browser QA.
   await page.evaluate(() => {
     window.serialRequests = 0;
@@ -14,20 +17,23 @@ async (page) => {
       requestPort: async () => { window.serialRequests++; throw new DOMException('Canceled', 'NotFoundError'); },
     }});
   });
-  const ids = await page.locator('input[name="device"]').evaluateAll(nodes => nodes.map(n => n.value));
-  check(ids.length === 13, 'all integrated images must be offered');
+  const choices = await page.locator('input[name="device"]').evaluateAll(nodes => nodes.map(n => ({ id: n.value, brand: n.closest('.device-card').dataset.brand })));
+  check(choices.length === 13, 'all integrated images must be offered');
   check(await page.locator('.pending-device input').count() === 0, 'pending device must not be selectable for flashing');
   const brands = await page.locator('[data-brand-filter]').evaluateAll(nodes => nodes.map(n => n.dataset.brandFilter));
-  check(brands[0] === '', 'default filter must be All');
+  check(brands.every(Boolean), 'brand chooser must not offer All');
+  check(await page.locator('[data-brand-filter][aria-pressed="true"]').count() === 0, 'no brand selected by default');
   for (const brand of brands) {
     await page.locator(`[data-brand-filter="${brand}"]`).click();
     const shown = await page.locator('.device-card:visible, .pending-device:visible').evaluateAll(nodes => nodes.map(n => n.dataset.brand));
-    check(shown.length > 0 && shown.every(value => !brand || value === brand), `wrong cards for ${brand}`);
+    check(shown.length > 0 && shown.every(value => value === brand), `wrong cards for ${brand}`);
     check(await page.locator('[data-brand-filter][aria-pressed="true"]').count() === 1, 'exactly one active brand');
+    check(await page.locator('#flasher-panel').isHidden(), 'brand alone must not open confirmation');
   }
-  await page.locator('[data-brand-filter=""]').click();
-  for (const id of ids) {
+  for (const { id, brand } of choices) {
+    await page.locator(`[data-brand-filter="${brand}"]`).click();
     await page.locator(`input[value="${id}"]`).check();
+    check(await page.locator('#flasher-panel').isVisible(), 'selected model must reveal confirmation');
     check(await page.locator('#prepare').isDisabled(), 'model change must require confirmation');
     const report = new URL(await page.locator('#report-issue').getAttribute('href'));
     check(report.pathname === '/zhuzhe1983/crossmux/issues/new' && report.searchParams.get('body').includes(await page.locator('#selected-name').textContent()), 'report link must carry selected model');
@@ -47,7 +53,7 @@ async (page) => {
   check(await page.locator('input[name="device"]:checked').count() === 0, 'hidden model selection must clear');
   check(await page.locator('#connect').isHidden() && await page.locator('#prepare').isDisabled(), 'hidden model cannot remain armed');
   check(await page.locator('#download-details').isHidden(), 'hidden model download links must clear');
-  await page.locator('[data-brand-filter=""]').click();
+  check(await page.locator('#flasher-panel').isHidden(), 'brand switch must collapse old confirmation');
   await page.locator('input[value="papermono"]').check();
   await page.locator('#acknowledge').check();
   await page.locator('#acknowledge').uncheck();
@@ -84,8 +90,9 @@ async (page) => {
   check(await page.locator('#prepare').isDisabled(), 'new model must still require confirmation');
   check(await page.locator('input[name="device"]:checked').count() === 0, 'filter must invalidate in-flight download selection');
   await page.locator('input[value="waveshare-epaper-397"]').check();
-  await page.locator('[data-brand-filter=""]').click();
-  check((await page.locator('#selected-name').textContent()).includes('Waveshare'), 'returning to All preserves a visible selection');
+  await page.locator('[data-brand-filter="WAVESHARE"]').click();
+  check(await page.locator('input[value="waveshare-epaper-397"]').isChecked(), 'reselecting the same brand preserves its model');
+  check(await page.locator('#flasher-panel').isVisible(), 'same brand keeps confirmation visible');
 
   await page.goto(base);
   for (const width of [320, 390, 768, 1024, 1440]) {
@@ -94,15 +101,22 @@ async (page) => {
   }
   await page.locator('#apps').scrollIntoViewIfNeeded();
   await page.locator('#screenshots').scrollIntoViewIfNeeded();
-  await page.waitForFunction(() => Array.from(document.images).every(image => image.complete && image.naturalWidth > 0));
+  await page.waitForFunction(() => Array.from(document.images).filter(image => image.getClientRects().length).every(image => image.complete && image.naturalWidth > 0));
   await page.screenshot({ path: 'output/playwright/desktop-verified.png', fullPage: true });
+  await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-first-desktop.png' });
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-first-mobile.png' });
   await page.locator('[data-brand-filter="M5STACK"]').click();
+  for (const width of [320, 390, 768, 1024, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `expanded model overflow at ${width}px`);
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-filter-mobile.png' });
   await page.locator('[data-brand-filter="METALIO"]').click();
   check(await page.locator('.pending-device').isVisible(), 'pending Ink4 Plus must follow its brand on mobile');
   await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-filter-metalio.png' });
-  await page.locator('[data-brand-filter=""]').click();
+  await page.locator('[data-brand-filter="M5STACK"]').click();
   await page.screenshot({ path: 'output/playwright/mobile-verified.png', fullPage: true });
   check(errors.length === 0, `uncaught page errors: ${errors.join(', ')}`);
 
@@ -116,10 +130,11 @@ async (page) => {
     const unsupported = await context.newPage();
     await unsupported.goto(base);
     await unsupported.waitForFunction(() => document.querySelector('#browser-note').textContent.includes('不支持'));
+    await unsupported.locator('[data-brand-filter="M5STACK"]').click();
     await unsupported.locator('input[value="papers3"]').check();
     check(await unsupported.locator('#acknowledge').isDisabled(), 'unsupported browser cannot confirm flashing');
     check(await unsupported.locator('#prepare').isDisabled(), 'unsupported browser cannot download-and-flash');
     check(await unsupported.locator('#download-details').isVisible(), 'unsupported browser needs manual download');
   } finally { await context.close(); }
-  return 'PASS: brand filters + selection/download reset, 13 firmware downloads, canceled chooser, corrupt download, stale request, 5 widths, all icons, unsupported browser; no physical USB used.';
+  return 'PASS: brand-first progressive disclosure + selection/download reset, 13 firmware downloads, canceled chooser, corrupt download, stale request, 5 collapsed/expanded widths, visible icons, unsupported browser; no physical USB used.';
 }

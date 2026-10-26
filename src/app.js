@@ -37,6 +37,7 @@ document.querySelectorAll('input[name="device"]').forEach(input => input.addEven
   $('checksum').textContent = model.sha256;
   $('full-download').href = model.file;
   $('app-download').href = `/firmware/${model.id}-firmware.bin`;
+  $('flasher-panel').hidden = false;
   setStatus(supported ? '请确认型号与备份，再下载固件。' : '已显示该机型的下载文件，可使用本地刷机工具。');
 }));
 
@@ -47,12 +48,13 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   if (busy) return;
   const brand = button.dataset.brandFilter;
   for (const tab of filterButtons) tab.setAttribute('aria-pressed', String(tab === button));
-  for (const card of deviceCards) card.hidden = !!brand && card.dataset.brand !== brand;
+  for (const card of deviceCards) card.hidden = card.dataset.brand !== brand;
+  $('model-options').hidden = false;
   const available = deviceCards.filter(card => !card.hidden && card.classList.contains('device-card')).length;
   const pending = deviceCards.filter(card => !card.hidden && card.classList.contains('pending-device')).length;
-  $('filter-summary').textContent = `${brand || '全部品牌'} · ${available} 个固件${pending ? ` · ${pending} 款待适配` : ''}`;
+  $('filter-summary').textContent = `${brand} · ${available} 个固件${pending ? ` · ${pending} 款待适配` : ''}`;
   // A hidden choice must not leave an armed image or an old request behind.
-  if (model && brand && model.brand !== brand) {
+  if (model && model.brand !== brand) {
     document.querySelector('input[name="device"]:checked').checked = false;
     model = undefined;
     $('acknowledge').checked = false;
@@ -64,6 +66,7 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
     $('ack-label').textContent = '我已核对型号，并了解完整刷写的影响。';
     $('firmware-facts').hidden = true;
     $('download-details').hidden = true;
+    $('flasher-panel').hidden = true;
     $('full-download').removeAttribute('href');
     $('app-download').removeAttribute('href');
     setStatus('请选择该品牌的具体型号，再确认下载。');
