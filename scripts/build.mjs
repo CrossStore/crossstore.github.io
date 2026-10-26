@@ -62,7 +62,7 @@ html = html.replace('{{DEVICES}}', models.map(d => `
     <span class="selection-mark" aria-hidden="true"></span>
     <span class="device-art ${d.type}" aria-hidden="true"><span class="mini-screen"><span>CrossStore</span><span class="mini-icons">${icon('appstore')}${icon('game2048')}${icon('airtune')}${icon('weread')}</span><i></i><i></i></span><span class="device-keys">•••</span></span>
     <span class="brand">${d.brand}</span><span class="device-name">${d.name}</span>
-    <span class="device-spec">${d.screen}</span><span class="tested${d.experimental ? ' experimental' : ''}">${d.experimental ? 'Alpha · 未实机测试' : '已有实机测试记录'}</span>
+    <span class="device-spec">${d.screen}</span><span class="tested${d.experimental ? ' experimental' : ''}">${d.validationLabel || (d.experimental ? 'Alpha · 未实机测试' : '已有实机测试记录')}</span>
   </label>`).join(''));
 html = html.replace('{{PENDING_DEVICES}}', pendingDevices.map(d => `<article class="pending-device" data-brand="${d.brand}"><div><span class="pill">待适配 · 尚无固件</span><h3>${d.name}</h3><p>${d.note}</p></div><a href="${issueLink(d, release).replaceAll('&', '&amp;')}" target="_blank" rel="noopener">提供硬件信息 / 提交问题 ↗</a></article>`).join(''));
 html = html.replace('{{APPS}}', apps.map(([id, name, text]) => `<a class="app-card" href="https://github.com/CrossStore/CrossStore/tree/main/packages/${id}">${icon(id)}<span><strong>${name}</strong><small>${text}</small></span><span class="app-arrow" aria-hidden="true">↗</span></a>`).join(''));

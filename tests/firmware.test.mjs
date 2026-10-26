@@ -50,7 +50,7 @@ function fixture(device = devices[0]) {
   });
   files.set(`${device.id}-full-install.bin`, full);
   parts.push({ name: `${device.id}-full-install.bin`, role: 'full_install', offset: 0, size: full.length, sha256: sha256(full) });
-  const manifest = { deviceSlug: device.id, targetId: device.targetId, chip: device.chip, flash: { size: 16777216, frequency: device.flashFrequency }, appStore: true, validationStatus: device.experimental ? 'alpha-unverified' : 'prior-hardware-record', crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
+  const manifest = { deviceSlug: device.id, targetId: device.targetId, models: device.models, chip: device.chip, flash: { size: 16777216, frequency: device.flashFrequency }, appStore: true, validationStatus: device.experimental ? 'alpha-unverified' : 'prior-hardware-record', crossmuxSha: release.sourceSha, sdkSha: release.sdkSha, assets: parts };
   const save = () => files.set(`${device.id}-install-manifest.json`, Buffer.from(JSON.stringify(manifest)));
   save(); return { device, files, manifest, save };
 }
@@ -103,9 +103,9 @@ test('issue links include the selected model, alpha status and immutable source'
   const url = new URL(issueLink(device, release));
   assert.equal(url.origin, 'https://github.com');
   assert.equal(url.pathname, '/zhuzhe1983/crossmux/issues/new');
-  assert.match(url.searchParams.get('title'), /Alpha.*M5Paper v1.1/);
+  assert.match(url.searchParams.get('title'), /Alpha.*M5Paper 初代 \/ v1.1/);
   const body = url.searchParams.get('body');
-  for (const value of [device.model, device.version, release.sourceSha, release.sdkSha, '未经实机测试']) assert.ok(body.includes(value));
+  for (const value of [device.model, device.version, release.sourceSha, release.sdkSha, '初代有基础实测记录，v1.1 未实机测试']) assert.ok(body.includes(value));
 });
 
 
@@ -118,4 +118,13 @@ test('pending Ink4 Plus cannot enter flash transport, and alpha labels cannot be
   const f = fixture(d); verifyDevice(d, release, f.files);
   f.manifest.validationStatus = 'prior-hardware-record'; f.save();
   assert.throws(() => verifyDevice(d, release, f.files), /incompatible/);
+});
+
+test('shared M5Paper image must explicitly cover original and v1.1 revisions', () => {
+  const device = devices.find(d => d.id === 'm5paper-v11');
+  assert.deepEqual(device.models, ['m5paper_v10', 'm5paper_v11']);
+  for (const models of [undefined, ['m5paper_v11'], ['m5paper_s3']]) {
+    const f = fixture(device); f.manifest.models = models; f.save();
+    assert.throws(() => verifyDevice(device, release, f.files), /model coverage/);
+  }
 });

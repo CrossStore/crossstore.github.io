@@ -31,7 +31,7 @@ async (page) => {
     check(await page.locator('#prepare').isDisabled(), 'model change must require confirmation');
     const report = new URL(await page.locator('#report-issue').getAttribute('href'));
     check(report.pathname === '/zhuzhe1983/crossmux/issues/new' && report.searchParams.get('body').includes(await page.locator('#selected-name').textContent()), 'report link must carry selected model');
-    if (id === 'm5paper-v11') check((await page.locator('#ack-label').textContent()).includes('尚未实机验证'), 'experimental confirmation missing');
+    if (id === 'm5paper-v11') check((await page.locator('#ack-label').textContent()).includes('v1.1 未实机测试'), 'revision validation confirmation missing');
     await page.locator('#acknowledge').check();
     await page.locator('#prepare').click();
     await page.waitForFunction(() => !document.querySelector('#connect').hidden, null, { timeout: 30000 });

@@ -1,562 +1,562 @@
 {
   "repository": "zhuzhe1983/crossmux",
-  "tag": "crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1",
-  "sourceSha": "8000d1b4e520e13bf45cadef7278171bd54a9c03",
-  "sdkSha": "a26ae8db1327540a67c9039fca4c7d7e4be72671",
-  "releaseUrl": "https://github.com/zhuzhe1983/crossmux/releases/tag/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1",
-  "publishedAt": "2026-10-25T17:02:33Z",
+  "tag": "crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1",
+  "sourceSha": "69916b041e5c78872bab08bbb606b76dd588d54d",
+  "sdkSha": "5818944004e564ffa066ad2f7fafaa237c1d131e",
+  "releaseUrl": "https://github.com/zhuzhe1983/crossmux/releases/tag/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1",
+  "publishedAt": "2026-10-26T09:06:46Z",
   "assets": [
     {
       "name": "crossstore-release.json",
       "bytes": 2583,
-      "sha256": "1776d31abcebd1b188771970076e74b4fcb8bcfd681d64fc2909d4c85af17f10",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/crossstore-release.json"
+      "sha256": "59dc3f3553e376d7346d3ea9c4e9e0aaa8e868e358ebca6872e99c448e855467",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/crossstore-release.json"
     },
     {
       "name": "eego-a4-SHA256SUMS",
       "bytes": 540,
-      "sha256": "206e1f5bf817edc44b3491285b8c99b3798149c33481b099920fa4ea0e93a3f6",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-SHA256SUMS"
+      "sha256": "54610a866e9e0d095e3afd3b787823e1596150f49a0b8b0298889f8191fdf5c1",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-SHA256SUMS"
     },
     {
       "name": "eego-a4-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-boot_app0.bin"
     },
     {
       "name": "eego-a4-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-bootloader.bin"
     },
     {
       "name": "eego-a4-firmware.bin",
       "bytes": 6404016,
-      "sha256": "a916e3dee88323675710c5f31d340daded7d60f7cdd0470ccaf71bc1ee1fe0f5",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-firmware.bin"
+      "sha256": "d595b0bf1e9a677b5fc43be96b0c1afdedf50455cf4fdd065dc7f0a68955193f",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-firmware.bin"
     },
     {
       "name": "eego-a4-full-install.bin",
       "bytes": 6469552,
-      "sha256": "3cf6d2cafab0a82e842957bb4f950703561cec4de7e9407f7b34fa5efa8159b9",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-full-install.bin"
+      "sha256": "2877f8daa821f132ee41d3c3c415fcb61b8a64a9be0acde73a00c2613e9213ae",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-full-install.bin"
     },
     {
       "name": "eego-a4-install-manifest.json",
       "bytes": 1625,
-      "sha256": "6effd69b4744515563e1f0e5b3427cadc79c2b55b366d23e180cfb1a0152f1cf",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-install-manifest.json"
+      "sha256": "ada2b42cf35ea7c387ff34e6ad0a3cfe6098a9966009ac3b9aa1274e6dfb9098",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-install-manifest.json"
     },
     {
       "name": "eego-a4-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/eego-a4-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/eego-a4-partitions.bin"
     },
     {
       "name": "lilygo-t5s3-SHA256SUMS",
       "bytes": 564,
-      "sha256": "3fb4f029f924a77f4ff067fd0bb5054e02424da1104915550e11bda074431a9a",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-SHA256SUMS"
+      "sha256": "a5530560e4a2ae179ab28e2416d10c38e37d8a5ef4c0baa8d662a8bdbc501ea4",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-SHA256SUMS"
     },
     {
       "name": "lilygo-t5s3-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-boot_app0.bin"
     },
     {
       "name": "lilygo-t5s3-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-bootloader.bin"
     },
     {
       "name": "lilygo-t5s3-firmware.bin",
       "bytes": 6254064,
-      "sha256": "57203a6cf06d96c67984f304585b17fcd9662e6c0ad81180d47c1fdca53b6111",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-firmware.bin"
+      "sha256": "124b318638161b012655825a9d675d289d6cae092233691f516fcdddc8842240",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-firmware.bin"
     },
     {
       "name": "lilygo-t5s3-full-install.bin",
       "bytes": 6319600,
-      "sha256": "1c9be918d63e3b4b811152b4d4e992d90b37377ea2cdd38b46d24d17b2a7e1d7",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-full-install.bin"
+      "sha256": "e86c852230d1c1d4d57323e6294dd537a7e8861e43cb72897a8de732e5a097d6",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-full-install.bin"
     },
     {
       "name": "lilygo-t5s3-install-manifest.json",
       "bytes": 1660,
-      "sha256": "5864756339a9ac8a5ecb38c18e08d5c5f9e48d36f53bbc4c2f9e57add8cae479",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-install-manifest.json"
+      "sha256": "6f52760381ac837916ed6962a6790cca20032f77e57b0705ffa2a2d32cb02c20",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-install-manifest.json"
     },
     {
       "name": "lilygo-t5s3-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/lilygo-t5s3-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/lilygo-t5s3-partitions.bin"
     },
     {
       "name": "m5paper-v11-SHA256SUMS",
       "bytes": 564,
-      "sha256": "bd0ea04025c7ff4baed2478878e7d368beda25188947967544c6ecbe839bdfab",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-SHA256SUMS"
+      "sha256": "bc30dc559dc4232796b662f76c8e643ee8b902c80209e44379a8609b7bb8601e",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-SHA256SUMS"
     },
     {
       "name": "m5paper-v11-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-boot_app0.bin"
     },
     {
       "name": "m5paper-v11-bootloader.bin",
       "bytes": 25040,
       "sha256": "672e085c89a22fe649768472af99c9d122fd99971ff25b1c75fbc2480c0305ab",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-bootloader.bin"
     },
     {
       "name": "m5paper-v11-firmware.bin",
-      "bytes": 5814032,
-      "sha256": "4382edc6b4c8291d60f89bf3690b74a6f80058d405817465525d649725218d63",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-firmware.bin"
+      "bytes": 5813872,
+      "sha256": "6827398054fb4d263ddab01c692fe8605d0c7f1d19b2857b13819a5144ee102a",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-firmware.bin"
     },
     {
       "name": "m5paper-v11-full-install.bin",
-      "bytes": 5879568,
-      "sha256": "48be6d1f926d7b69aa61cf78ae8eca5e1ea040c624039aeb06147c7e66fc99d4",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-full-install.bin"
+      "bytes": 5879408,
+      "sha256": "d9f5290c574928f557699be46e000566cf142d6fc7d2760d73e861000ad888b3",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-full-install.bin"
     },
     {
       "name": "m5paper-v11-install-manifest.json",
-      "bytes": 1669,
-      "sha256": "989e1e7ee39d95e7b2edf8317719ccd3114e196c69a868118b70d0385c5a1368",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-install-manifest.json"
+      "bytes": 1688,
+      "sha256": "4ff9603f51294cd1bc60d564dbe21503004fe2d7de32dee5e8028fe1847e4777",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-install-manifest.json"
     },
     {
       "name": "m5paper-v11-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/m5paper-v11-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/m5paper-v11-partitions.bin"
     },
     {
       "name": "metalio-eink4-SHA256SUMS",
       "bytes": 576,
-      "sha256": "211efcf13505c32851d4183701d21efcdf0e84be911a759a49204c174368f9ee",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-SHA256SUMS"
+      "sha256": "4768b8e7d76a62fb416e68f340a0017de41382c65ab2e3f637c0a971532c5171",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-SHA256SUMS"
     },
     {
       "name": "metalio-eink4-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-boot_app0.bin"
     },
     {
       "name": "metalio-eink4-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-bootloader.bin"
     },
     {
       "name": "metalio-eink4-firmware.bin",
       "bytes": 6319456,
-      "sha256": "09e81e12022c2940c5898187be7f65b4a3bcbea5fd8c102abb4bc762289aacb7",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-firmware.bin"
+      "sha256": "e1b36de3d87a3cf95312a4c8cc7466746c7890cbca384f331a8d7e2e9d6fe449",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-firmware.bin"
     },
     {
       "name": "metalio-eink4-full-install.bin",
       "bytes": 6384992,
-      "sha256": "1fd7f5a200c29f5e8147c6cf2b3723200649f63d0b7f7d4ef0bb449b031ccf94",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-full-install.bin"
+      "sha256": "3d287daf0778d62de720e020b941577b05623efc977cb06720c30a332d7482fa",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-full-install.bin"
     },
     {
       "name": "metalio-eink4-install-manifest.json",
       "bytes": 1685,
-      "sha256": "3bfd3e6315b2b5690ff55c54590667d69982422b1715b98cf43c46e53c6081e1",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-install-manifest.json"
+      "sha256": "c76c97a2ee9e1c08b6bad01ca0c9410ca8873729177f9c2c4a0ad50feff97960",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-install-manifest.json"
     },
     {
       "name": "metalio-eink4-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/metalio-eink4-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/metalio-eink4-partitions.bin"
     },
     {
       "name": "murphy-m4-SHA256SUMS",
       "bytes": 552,
-      "sha256": "635458e30c2bc8e53977b71d84826b618d199b3df5ce6baca2cf0c0c612f0531",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-SHA256SUMS"
+      "sha256": "090087e533ce3b686bcde20d385de98b566a209548240e04580d42e9db730e4a",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-SHA256SUMS"
     },
     {
       "name": "murphy-m4-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-boot_app0.bin"
     },
     {
       "name": "murphy-m4-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-bootloader.bin"
     },
     {
       "name": "murphy-m4-firmware.bin",
       "bytes": 6321936,
-      "sha256": "d0be1f194204ff317f19e1706f30f2ea4ea6a227cfe94371d72b2837367d8c99",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-firmware.bin"
+      "sha256": "bc44dd887c3e397f39b5526ad5b79d90d00a9572c141de910a450b23dcb38ea3",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-firmware.bin"
     },
     {
       "name": "murphy-m4-full-install.bin",
       "bytes": 6387472,
-      "sha256": "7e09813c3658f69e9fccb93822f7c2e4e3db2335e1024d77e4cfb60bcc259997",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-full-install.bin"
+      "sha256": "ede08fa757c77071cf99825b9fa8037ee8b0bc989afc696addfe9320eabada85",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-full-install.bin"
     },
     {
       "name": "murphy-m4-install-manifest.json",
       "bytes": 1645,
-      "sha256": "0e50da3272984755232f8449e36d01cf196ef9e2f0e342e1a424461f4b4ee152",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-install-manifest.json"
+      "sha256": "2e18b814df4fe9b04f53c23394e33d3aca6d545c0ee3c96ebc7435ebbdff4650",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-install-manifest.json"
     },
     {
       "name": "murphy-m4-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/murphy-m4-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/murphy-m4-partitions.bin"
     },
     {
       "name": "papermono-SHA256SUMS",
       "bytes": 552,
-      "sha256": "84b71e337f4b2dcadf83f693247bdd919c7800ceb63f421e21609947415cf51f",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-SHA256SUMS"
+      "sha256": "15cfec2eadfb7ce4fce7df535e4a97d704a037e624d842b193252c8e04417dc2",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-SHA256SUMS"
     },
     {
       "name": "papermono-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-boot_app0.bin"
     },
     {
       "name": "papermono-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-bootloader.bin"
     },
     {
       "name": "papermono-firmware.bin",
       "bytes": 6403472,
-      "sha256": "2516d3012d0333200f276ee1670328d66d6cde4d1a6a3ef855bd80b2da9abe30",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-firmware.bin"
+      "sha256": "83e36418ab780970bf5760b6bb76b1b28b3240422bfc0a3c2a068a4f29b2a734",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-firmware.bin"
     },
     {
       "name": "papermono-full-install.bin",
       "bytes": 6469008,
-      "sha256": "32a0a808378de88f633512f7d78842d47be8c515d8d7598744c834afd21394e0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-full-install.bin"
+      "sha256": "3dfd1d9771ade746c8915246b6623dcad7681d80238e60ae40bac953349dc8a5",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-full-install.bin"
     },
     {
       "name": "papermono-install-manifest.json",
       "bytes": 1668,
-      "sha256": "6a731e406fa96582451336aafa39cc26f87562fc0f50502d5068ef276c82c2f1",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-install-manifest.json"
+      "sha256": "2b0f3113bb7a9ffa4f825e92b317539cfab5552752b81629d47ea6b17e89dab3",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-install-manifest.json"
     },
     {
       "name": "papermono-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papermono-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papermono-partitions.bin"
     },
     {
       "name": "papers3-SHA256SUMS",
       "bytes": 540,
-      "sha256": "fcbf5a41779f799eb4ad198cc7e1ce755d61b47ef2be09ba6940dd11d242f33d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-SHA256SUMS"
+      "sha256": "d95688b333524f86951653085859fa9c05f64947d66c5566a914213df7878238",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-SHA256SUMS"
     },
     {
       "name": "papers3-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-boot_app0.bin"
     },
     {
       "name": "papers3-bootloader.bin",
       "bytes": 19968,
       "sha256": "31b3c1be45dc5a76aa85c82540d6787b675e711eaf11021a5eea7e36f469c6de",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-bootloader.bin"
     },
     {
       "name": "papers3-firmware.bin",
       "bytes": 6329936,
-      "sha256": "dcb0d27aef28de4766fa0f2f3122eb85b084187d2389155300bca0bd969ed1a1",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-firmware.bin"
+      "sha256": "3b768daba5dbb098a44713720ade0732732472c4d6288bbcea293a45165b5043",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-firmware.bin"
     },
     {
       "name": "papers3-full-install.bin",
       "bytes": 6395472,
-      "sha256": "25effe69ccc01ddab6c211321bd1a5f4bb372803a4a4c9ea8719a7774919123d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-full-install.bin"
+      "sha256": "a4a022af4f9a9051c6d16e1f7624a7a570596a0365fe455fd5f37e8835540ebc",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-full-install.bin"
     },
     {
       "name": "papers3-install-manifest.json",
       "bytes": 1641,
-      "sha256": "69e5421d5ad18de24d3fa5e7488a4572b3a55b76c03ae2cdca0ee491ad59336c",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-install-manifest.json"
+      "sha256": "609137727a7d26494ddb79aaffe4d3157c15c4c52fc9274b11b47bf747006790",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-install-manifest.json"
     },
     {
       "name": "papers3-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/papers3-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/papers3-partitions.bin"
     },
     {
       "name": "readpico-SHA256SUMS",
       "bytes": 546,
-      "sha256": "dc752aeb15959924eb873d5584e62042cd4165db622baf7173679af9b1935c5b",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-SHA256SUMS"
+      "sha256": "4e9f8ee1e5dedef92f02df214c226aca74a6280cabe0d91d2fc38a054ff59cf0",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-SHA256SUMS"
     },
     {
       "name": "readpico-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-boot_app0.bin"
     },
     {
       "name": "readpico-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-bootloader.bin"
     },
     {
       "name": "readpico-firmware.bin",
       "bytes": 6548832,
-      "sha256": "92f1f9ef7480210dfd9fda16e311ad225bf1353d002554fd611aa5ead22a8492",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-firmware.bin"
+      "sha256": "3f1acc7e919f256497127f1c7539816551cc267cec2f76fbcf204de99f8088d5",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-firmware.bin"
     },
     {
       "name": "readpico-full-install.bin",
       "bytes": 6614368,
-      "sha256": "127744f983618bdf125ef787e36707ecbf2703cd6488aecbdc79c8eecce9250c",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-full-install.bin"
+      "sha256": "d37e7503593328816edc35561d4e6a26b4b238812282718dcf828420f71b29cc",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-full-install.bin"
     },
     {
       "name": "readpico-install-manifest.json",
       "bytes": 1652,
-      "sha256": "3ce236ec2fcbe9be6d69ddbc037c6736dd10d0c9306ce457f752af8403b8e330",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-install-manifest.json"
+      "sha256": "963fd72250c439836069ac49c8949e75312446d8f280b59a05901c7671c479a9",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-install-manifest.json"
     },
     {
       "name": "readpico-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/readpico-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/readpico-partitions.bin"
     },
     {
       "name": "sticky-SHA256SUMS",
       "bytes": 534,
-      "sha256": "d57185e01e9a9d77239d5090731045a52f04fb84f4164ac63e84e3e1b69a0cd8",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-SHA256SUMS"
+      "sha256": "c1b8fedcab8c198bf0b2d39e7249a102eadb12228006cff5362393d2b15c29c9",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-SHA256SUMS"
     },
     {
       "name": "sticky-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-boot_app0.bin"
     },
     {
       "name": "sticky-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-bootloader.bin"
     },
     {
       "name": "sticky-firmware.bin",
       "bytes": 6244448,
-      "sha256": "80555e38c0a1c818c51a27cd38bfe123271a9e6bfa51f7c14ccedb014b33407c",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-firmware.bin"
+      "sha256": "515db2918cfbdfdec475c4e09726315adf464de6968a192f90056303a13d51bf",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-firmware.bin"
     },
     {
       "name": "sticky-full-install.bin",
       "bytes": 6309984,
-      "sha256": "8fc55fd739436f4f9e22dc27390a44def948ba23f28f0a64d73a636eafa813e9",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-full-install.bin"
+      "sha256": "0b44012d111e3d8bf7919bd5afa5bf2be5509141d01ad5d04f50042192fa9466",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-full-install.bin"
     },
     {
       "name": "sticky-install-manifest.json",
       "bytes": 1615,
-      "sha256": "0142436bbd3fd693875656cc933016b2d814a02bf508afe83850656910360e64",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-install-manifest.json"
+      "sha256": "3d08aba385da4ec13b65b097c1bf5f7dbba06d70a04403a8a64f1c0b99ad45f1",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-install-manifest.json"
     },
     {
       "name": "sticky-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/sticky-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/sticky-partitions.bin"
     },
     {
       "name": "waveshare-epaper-397-SHA256SUMS",
       "bytes": 618,
-      "sha256": "6cb4114c3a4a96827f23c0c59448252945f32633dad71e84eaef5a06a918f007",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-SHA256SUMS"
+      "sha256": "4747aebd9f19e13f0539855403f7a125bd7f30d46201ccc08d816229c3abf478",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-SHA256SUMS"
     },
     {
       "name": "waveshare-epaper-397-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-boot_app0.bin"
     },
     {
       "name": "waveshare-epaper-397-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-bootloader.bin"
     },
     {
       "name": "waveshare-epaper-397-firmware.bin",
       "bytes": 6338336,
-      "sha256": "f5ec81875ed223e2268e4745eb6520dd3dfd50ac1b253a0d15998d14a940c67d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-firmware.bin"
+      "sha256": "a4f79a8549ca2d61bad5fe4d9057af528569dfbac056eecc7db81f4de44e38e6",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-firmware.bin"
     },
     {
       "name": "waveshare-epaper-397-full-install.bin",
       "bytes": 6403872,
-      "sha256": "bde3768c3d831c3da5a6aaf83c24cfb85c5409ef274e4a9c4f0084c535db07a0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-full-install.bin"
+      "sha256": "21db830e4f1f74a3754bd914042c8f787de02e0887e403f6fbaee25472f54073",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-full-install.bin"
     },
     {
       "name": "waveshare-epaper-397-install-manifest.json",
       "bytes": 1760,
-      "sha256": "40cf0b45e6a293470944c2e5cd58855157436084f02307ba2cab794e5842df4e",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-install-manifest.json"
+      "sha256": "bcd6967aa1b4aca02e93654285230bdb880e28b17e33d899cf0b148498475dc9",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-install-manifest.json"
     },
     {
       "name": "waveshare-epaper-397-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/waveshare-epaper-397-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/waveshare-epaper-397-partitions.bin"
     },
     {
       "name": "x4c-SHA256SUMS",
       "bytes": 516,
-      "sha256": "a69847bbc42e359c2a733675dc1b2c7ba3d31a23118b76c996a6472c069c0af1",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-SHA256SUMS"
+      "sha256": "01cf8b60e4ac1a6d5883827f2d97f44341b9f406facd8cd8e0368eb30feb03ef",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-SHA256SUMS"
     },
     {
       "name": "x4c-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-boot_app0.bin"
     },
     {
       "name": "x4c-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-bootloader.bin"
     },
     {
       "name": "x4c-firmware.bin",
       "bytes": 6287760,
-      "sha256": "9ff9a4c19b09e8904605685bb981fd226b83102258243b6fdbfcfc4502c4fb5d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-firmware.bin"
+      "sha256": "4aaf4258ab82fe7b03ac47b52e9ec9bf66523f76f7ef2241ec1a2163c8b41cd2",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-firmware.bin"
     },
     {
       "name": "x4c-full-install.bin",
       "bytes": 6353296,
-      "sha256": "96f2dff20ec00b30a3ece0437e1351f03a694d8c845bd2c0997d2239308c467d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-full-install.bin"
+      "sha256": "ea62186ace0b4d37bf8619ffde3ce2546505ae9fc6f0eb79c9ac9e3b2a3b8117",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-full-install.bin"
     },
     {
       "name": "x4c-install-manifest.json",
       "bytes": 1613,
-      "sha256": "b6a1d2ab0dcddc49770c6ab81cf0d4d6f1b602f09e7b72ca5c332a65c94068bf",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-install-manifest.json"
+      "sha256": "2313024c93eaebc12f0bf874c584b8a6a45fdc165d60c41e5b1d14695bfd6bec",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-install-manifest.json"
     },
     {
       "name": "x4c-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4c-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4c-partitions.bin"
     },
     {
       "name": "x4pro-SHA256SUMS",
       "bytes": 528,
-      "sha256": "91eb9e36a62bbb7fed4d57b3d4cc42b8e8a3af0c23918c4ce750a15e3c9204cc",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-SHA256SUMS"
+      "sha256": "d7c5d207b394b4abfd7a0cecd02f85b1a5262a5f2c5fc954a2be027315a26997",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-SHA256SUMS"
     },
     {
       "name": "x4pro-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-boot_app0.bin"
     },
     {
       "name": "x4pro-bootloader.bin",
       "bytes": 18720,
       "sha256": "15f88ae11793eddc5b7e1f770fba54b10a6f59809c14d7c51cfbf0db8d2fa3ca",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-bootloader.bin"
     },
     {
       "name": "x4pro-firmware.bin",
       "bytes": 6320528,
-      "sha256": "77a8d68a73b946032c70a46d3a7f0c5ba0d53d228ebf2819657b8cfb9a4b8bdb",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-firmware.bin"
+      "sha256": "15449ac1455859808b50f8ceea7af54b5ae837af47e370e01b469f33766cedce",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-firmware.bin"
     },
     {
       "name": "x4pro-full-install.bin",
       "bytes": 6386064,
-      "sha256": "f56837f443386ab2c1ef0ff9cbd0cb1d87437f2642f1e7fb4989f98719f3e253",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-full-install.bin"
+      "sha256": "f894b6e1d66215d28c6eb6b1bc738508dc25c1ce3b2705d3c8c40e27fb9885f6",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-full-install.bin"
     },
     {
       "name": "x4pro-install-manifest.json",
       "bytes": 1621,
-      "sha256": "7928975c8050947ed060fb1b07d4785c6eb86fa4d307b10e0ee1b87a8a17553d",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-install-manifest.json"
+      "sha256": "67600c363f72edb3e7f8848b142f4b1668ac7eafd6a22ce45beaff47cf0b1263",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-install-manifest.json"
     },
     {
       "name": "x4pro-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/x4pro-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/x4pro-partitions.bin"
     },
     {
       "name": "xteink-SHA256SUMS",
       "bytes": 534,
-      "sha256": "8e10cd1eadc84bbc9005b4a443e2b8696f179be6dd51d062b0952a749dbe1204",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-SHA256SUMS"
+      "sha256": "43f1076d7fb3841c965387e1b09c70a13f4051c81f6dbc5739526507f578065e",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-SHA256SUMS"
     },
     {
       "name": "xteink-boot_app0.bin",
       "bytes": 8192,
       "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-boot_app0.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-boot_app0.bin"
     },
     {
       "name": "xteink-bootloader.bin",
       "bytes": 18688,
       "sha256": "46893df6619f0c7d7689fa309e76551e964e3d83d68c38ccb3e52ed8c3537226",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-bootloader.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-bootloader.bin"
     },
     {
       "name": "xteink-firmware.bin",
       "bytes": 6099328,
-      "sha256": "567a4923ee97c9afe3acbb06adb15a20cc3a41552f5b3a36d00b3d769c705afa",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-firmware.bin"
+      "sha256": "75e5a45148ad0f45295f40cf8ff8cbf03fa9a7d1cc3c81fc68cf9d062fb06d1f",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-firmware.bin"
     },
     {
       "name": "xteink-full-install.bin",
       "bytes": 6164864,
-      "sha256": "c890ba303193825e0132159c1dd40518218cf4d63e94fe5e13303ec61518a1c4",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-full-install.bin"
+      "sha256": "1909694609390dbfdb270f530b21d77918e266868ea9cd35a1832e6cffe52b66",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-full-install.bin"
     },
     {
       "name": "xteink-install-manifest.json",
       "bytes": 1634,
-      "sha256": "a606ee11c3289b3be53a7b50ac29a1f4f66253f9680498033011c88dd8e941e3",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-install-manifest.json"
+      "sha256": "65c47df745cd933f88a2b037aeb770e5d8e04759ade111710f90a026f35d343b",
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-install-manifest.json"
     },
     {
       "name": "xteink-partitions.bin",
       "bytes": 3072,
       "sha256": "bd0f7954aca2ef7d925ee21aaa1f3dc8822d1d6ce5cbbd26a135e5886bfff6ce",
-      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-8000d1b4e520e13bf45cadef7278171bd54a9c03-40213407282-1/xteink-partitions.bin"
+      "url": "https://github.com/zhuzhe1983/crossmux/releases/download/crossstore-69916b041e5c78872bab08bbb606b76dd588d54d-40294945240-1/xteink-partitions.bin"
     }
   ]
 }

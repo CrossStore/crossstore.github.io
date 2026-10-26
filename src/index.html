@@ -50,7 +50,7 @@
       <span class="visual-caption bottom-caption">界面示意 · 实际效果随设备而异</span>
     </div>
   </section>
-  <div class="intro-strip wrap"><p>从一台阅读器，到一块有更多用途的屏幕。</p><span>3 款实测机型 <i>/</i> 一个应用生态</span></div>
+  <div class="intro-strip wrap"><p>从一台阅读器，到一块有更多用途的屏幕。</p><span>4 款设备有实测记录 <i>/</i> 一个应用生态</span></div>
 
   <section class="section wrap" id="flash" aria-labelledby="flash-title">
     <div class="section-heading"><div><p class="eyebrow">01 / GET STARTED</p><h2 id="flash-title">选好设备，接上 USB。</h2></div><p>不用安装刷机软件。<br>在桌面版 Chrome 或 Edge 中完成。</p></div>
@@ -62,7 +62,7 @@
         <p id="filter-summary" class="filter-summary" role="status" aria-live="polite">{{FILTER_SUMMARY}}</p>
         <div class="device-grid">{{DEVICES}}</div>
       </fieldset>
-      <p class="alpha-note">PaperMono、PaperS3、Waveshare 3.97 有本站维护者的实机测试记录；其余可刷机型均为 Alpha，尚未实机测试。当前版本的测试状态和限制请查看机型说明与 Release。</p>
+      <p class="alpha-note">PaperMono、PaperS3、Waveshare 3.97 有本站维护者的实机测试记录；初代 M5Paper 有基础实测记录，与 v1.1 共用固件，v1.1 未实机测试。M5Paper 系列及其余可刷机型仍为 Alpha，详细范围见机型说明。当前版本的测试状态和限制请查看机型说明与 Release。</p>
       <div class="pending-devices">{{PENDING_DEVICES}}</div>
       <div class="flasher-panel">
         <div class="flash-information">
@@ -81,7 +81,7 @@
           <button type="button" class="button primary wide" id="connect" hidden>连接 USB 并开始完整刷写 <span aria-hidden="true">↗</span></button>
           <div class="flash-progress" id="flash-progress" hidden><progress id="progress" max="100" aria-label="固件刷写进度"></progress></div>
           <p id="flash-status" class="flash-status" role="status" aria-live="polite">选择型号后继续。固件将从本站下载。</p>
-          <details class="connection-help"><summary>连接不上，或不清楚怎样进入下载模式？</summary><p>使用可传数据的 USB 线，关闭串口监视器等占用端口的软件。先让刷机工具尝试自动进入下载模式；失败后再按设备官方说明操作。</p><p>Waveshare：按住 BOOT，短按 RESET，再松开 BOOT。刷完后按 RESET 重启。M5Stack 设备请参考对应机型的下载模式说明。M5Paper v1.1 通过 USB 转串口连接，电脑未识别时请检查 CP2104 / CH9102 驱动。</p><div class="help-links"><a href="https://docs.m5stack.com/en/core/PaperMono">PaperMono 文档 ↗</a><a href="https://docs.m5stack.com/en/core/PaperS3">PaperS3 文档 ↗</a><a href="https://docs.m5stack.com/en/core/Paper_v1.1">M5Paper v1.1 文档 ↗</a><a href="https://www.waveshare.com/wiki/ESP32-S3-ePaper-3.97">Waveshare 文档 ↗</a></div></details>
+          <details class="connection-help"><summary>连接不上，或不清楚怎样进入下载模式？</summary><p>使用可传数据的 USB 线，关闭串口监视器等占用端口的软件。先让刷机工具尝试自动进入下载模式；失败后再按设备官方说明操作。</p><p>Waveshare：按住 BOOT，短按 RESET，再松开 BOOT。刷完后按 RESET 重启。M5Stack 设备请参考对应机型的下载模式说明。初代 M5Paper 与 v1.1 通过 USB 转串口连接，电脑未识别时请检查 CP2104 / CH9102 驱动。</p><div class="help-links"><a href="https://docs.m5stack.com/en/core/PaperMono">PaperMono 文档 ↗</a><a href="https://docs.m5stack.com/en/core/PaperS3">PaperS3 文档 ↗</a><a href="https://docs.m5stack.com/en/core/Paper">初代 M5Paper 文档 ↗</a><a href="https://docs.m5stack.com/en/core/Paper_v1.1">M5Paper v1.1 文档 ↗</a><a href="https://www.waveshare.com/wiki/ESP32-S3-ePaper-3.97">Waveshare 文档 ↗</a></div></details>
         </div>
       </div>
     </form>

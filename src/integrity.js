@@ -14,7 +14,7 @@ export function issueLink(model, release) {
   const params = new URLSearchParams({
     title: `[${model.available === false ? '适配' : model.experimental ? 'Alpha' : 'Bug'}][${model.model}] 请填写问题摘要`,
     body: `设备 / Model: ${model.model}
-验证状态: ${model.available === false ? '待适配，暂无可刷写固件' : model.experimental ? 'Alpha，未经实机测试' : '已有实机测试记录'}
+验证状态: ${model.available === false ? '待适配，暂无可刷写固件' : model.validationSummary || (model.experimental ? 'Alpha，未经实机测试' : '已有实机测试记录')}
 固件 / Firmware: ${model.version}
 CrossMux: ${release.sourceSha}
 SDK: ${release.sdkSha}

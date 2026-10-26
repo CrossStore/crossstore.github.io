@@ -29,7 +29,7 @@ document.querySelectorAll('input[name="device"]').forEach(input => input.addEven
   $('selected-name').textContent = model.model;
   $('selected-note').textContent = model.note;
   $('report-issue').href = issueLink(model, release);
-  $('ack-label').textContent = `我确认设备是 ${model.model}${model.experimental ? '，理解此固件尚未实机验证' : ''}，已备份并同意清除设备内部的原固件和设置。`;
+  $('ack-label').textContent = `我确认设备是 ${model.model}${model.experimental ? `，理解${model.validationSummary || '此固件尚未实机验证'}` : ''}，已备份并同意清除设备内部的原固件和设置。`;
   $('firmware-version').textContent = model.version;
   $('firmware-size').textContent = `${(model.bytes / 1024 / 1024).toFixed(2)} MiB`;
   $('firmware-facts').hidden = false;
