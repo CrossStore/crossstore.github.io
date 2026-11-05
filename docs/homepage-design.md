@@ -62,7 +62,7 @@ selected capability, and allowed applicable permissions. Unknown devices return 
 results. Denying an optional camera permission on a camera-free model does not hide
 its LoRa chat. Choosing an unsupported capability shows an empty state; reset
 preserves the chosen model and restores capability/permission choices. Counts show
-all apps → model-compatible apps → final recommendations. Eight representative
+all apps → hardware-selected built-in apps → apps available under the selected capabilities and permissions. Eight representative
 results are initially visible; expand/collapse exposes the rest without changing
 filters. Each new filter selection restores the compact view.
 
@@ -136,3 +136,24 @@ content-derived filenames, shared by both locales and credits. Page templates
 reference those names, so cached scripts/styles from a previous design cannot be
 mixed with new HTML. The former `/assets/app.js` URL remains a compatibility alias
 for cached HTML from the preceding release.
+
+## Built-in apps and permissions — 2026-11-06
+
+Product copy now describes apps automatically selected and bundled for each
+hardware profile, with permissions managed by the user. The two-stage interactive
+preview uses the existing hardware/permission intersection; it does not install
+apps or change a visitor’s device. Bookshop functionality remains separate.
+
+Chinese and English navigation, hero, filters, FAQ and firmware completion copy
+use this model. The menu preview no longer offers an application marketplace,
+and device illustrations use a calculator icon in place of the shopping bag.
+The application section is marked as a new-version preview. The pinned older
+firmware remains clearly distinguished; this website update does not modify or
+relabel its binaries, release metadata or feature checks. Existing archive icon
+IDs and independently deployed legacy package catalog are not a store entry in
+the new product UI.
+
+Validation: all 17 Node tests and the production build pass. Headless browser
+checks cover both locales, hardware and permission filters, the custom menu,
+expanded FAQ and firmware help, language switching, and widths from 320 to
+1440 px. The narrow English header and hero actions were also checked visually.

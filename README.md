@@ -19,9 +19,9 @@ Open http://localhost:4173 (中文) or http://localhost:4173/en/ (English) in a 
 
 ## Firmware policy
 
-- The homepage focuses on personal book discovery, device-aware app recommendations and customizable main navigation. See [homepage design and data sources](docs/homepage-design.md).
+- The homepage focuses on personal book discovery, built-in apps automatically selected for the hardware, user-managed permissions and customizable main navigation. See [homepage design and data sources](docs/homepage-design.md).
 - Current test devices: PaperS3, PaperMono and Ink4 Plus. The public installer offers the two matching pinned PaperS3/PaperMono images. Ink4 Plus is shown as testing, with public firmware pending and no flash button.
-- New book-store/menu features are previewed separately from the older pinned download. A new public firmware release must be reviewed before replacing that boundary.
+- The upcoming built-in app model and new bookshop/menu features are previewed separately from the older pinned download. A new public firmware release must be reviewed before replacing that boundary.
 - The archived release metadata covers 13 images; the site build verifies and publishes only the curated two sets, cleaning stale firmware output. The full inventory remains tested for integrity, without adding old models back to the homepage.
 - A per-model issue link includes the selected model, firmware version and source revisions. Brand/model changes clear confirmation and prepared downloads. Selection is locked during flashing.
 - `firmware-release.json` pins public release URLs, source / SDK commits, sizes and hashes. Updating this file is a reviewed source change, not a dynamic “latest” fetch.

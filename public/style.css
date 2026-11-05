@@ -362,6 +362,7 @@ html[lang=en] .menu-preview>span{font-size:9px}
 }
 @media(max-width:359px){
   .wrap{width:calc(100% - 32px)}.site-header .wordmark{font-size:25px}.header-utilities{gap:10px}.language-link{padding-left:10px}
+  html[lang=en] .site-header nav{font-size:10px}
   .hero h1{font-size:39px}html[lang=en] .hero h1{font-size:35px}.hero-description{font-size:12px}.hero-actions{gap:19px}.hero .button{font-size:13px;min-width:134px;padding-inline:14px}.hero .text-link{font-size:12px}
   .book-shelf{gap:14px}.book-shelf strong{font-size:14px}.app-grid{gap:0 18px}.app-card{gap:8px}.app-icon{width:27px;height:27px}.app-icon img{width:26px;height:26px}.app-card strong,html[lang=en] .app-card strong{font-size:15px}.app-card small{font-size:9px}
   .calendar-heading{font-size:18px}.reading-calendar{padding-inline:20px}.menu-items li{gap:12px}.menu-tools{gap:7px}.menu-tools button{width:29px}.device-name{font-size:18px}.device-art.landscape{width:93px}.filter-options{column-gap:17px}

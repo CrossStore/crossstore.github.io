@@ -4,8 +4,8 @@
     "en": "CrossStore — Reading, and a little more of life"
   },
   "meta.description": {
-    "zh": "个人书店、阅读日历与适合设备的应用。为墨水屏留一点想象。",
-    "en": "A personal bookshop, a reading calendar and apps that fit your device. A little more life on e-paper."
+    "zh": "个人书店、阅读日历，以及根据硬件自动匹配的内置应用与权限管理。为墨水屏留一点想象。",
+    "en": "A personal bookshop, a reading calendar and built-in apps automatically selected for your hardware, with permissions under your control."
   },
   "skip": {
     "zh": "跳转到正文",
@@ -24,8 +24,8 @@
     "en": "Bookshop"
   },
   "nav.apps": {
-    "zh": "应用生态",
-    "en": "Apps"
+    "zh": "内置应用",
+    "en": "Built-in apps"
   },
   "nav.calendar": {
     "zh": "阅读日历",
@@ -36,8 +36,8 @@
     "en": "Your menu"
   },
   "nav.install": {
-    "zh": "为设备安装",
-    "en": "Get started"
+    "zh": "安装固件",
+    "en": "Install firmware"
   },
   "nav.language": {
     "zh": "切换语言",
@@ -48,16 +48,16 @@
     "en": "Reading, and a little<br>more of life."
   },
   "hero.description": {
-    "zh": "发现下一本好书，装上喜欢的应用。",
-    "en": "Find your next book. Make room for the apps you love."
+    "zh": "发现下一本好书，打开适合设备的内置应用。",
+    "en": "Find your next book. Enjoy built-in apps that fit your device."
   },
   "hero.primary": {
     "zh": "发现下一本",
     "en": "Find your next read"
   },
   "hero.secondary": {
-    "zh": "探索应用",
-    "en": "Explore the apps"
+    "zh": "探索内置应用",
+    "en": "Explore apps"
   },
   "hero.caption": {
     "zh": "书页之间，自有天地。",
@@ -140,16 +140,16 @@
     "en": "Made for the way you read."
   },
   "apps.description": {
-    "zh": "读书、工具、游戏、连接彼此。<br>先匹配机型，再按能力与权限筛选。",
-    "en": "Reading, small tools, a little play.<br>Match your model, then choose capabilities and permissions."
+    "zh": "根据硬件能力，自动选择合适的应用内置。<br>网络、阅读记录、相机等权限，由你管理。",
+    "en": "Apps are automatically selected and built in to suit your hardware.<br>You manage access to the network, reading history, camera and more."
   },
   "apps.model": {
     "zh": "机型",
     "en": "Device"
   },
   "apps.modelLabel": {
-    "zh": "应用推荐机型",
-    "en": "Device for app recommendations"
+    "zh": "选择设备，预览内置应用",
+    "en": "Choose a device to preview built-in apps"
   },
   "apps.capability": {
     "zh": "能力与权限",
@@ -176,12 +176,12 @@
     "en": "Camera"
   },
   "apps.permissions": {
-    "zh": "管理推荐中的权限",
-    "en": "Choose allowed permissions"
+    "zh": "权限管理",
+    "en": "Manage permissions"
   },
   "apps.permissionsHint": {
-    "zh": "取消你不想开放的权限，隐藏需要它们的应用。这里只调整网页推荐，不会修改设备授权。",
-    "en": "Uncheck a permission to hide apps that need it. These choices filter this preview; they do not grant permissions on your device."
+    "zh": "取消不想开放的权限，预览中将隐藏需要这些权限的应用。网页选择不会更改设备上的授权。",
+    "en": "Uncheck a permission to hide apps that need it in this preview. These choices do not change permissions on your device."
   },
   "apps.allPermissions": {
     "zh": "允许全部声明权限",
@@ -196,12 +196,8 @@
     "en": "{count} apps"
   },
   "apps.compatible": {
-    "zh": "{model} 能力匹配 {count}",
-    "en": "{count} match {model}"
-  },
-  "apps.recommended": {
-    "zh": "按当前能力与权限，推荐 {count} 款",
-    "en": "Recommended: {count}"
+    "zh": "{model} 适配内置 {count} 款",
+    "en": "{count} selected for {model}"
   },
   "apps.expand": {
     "zh": "展开全部 {count} 款应用 ↓",
@@ -212,8 +208,8 @@
     "en": "Show fewer apps ↑"
   },
   "apps.emptyTitle": {
-    "zh": "这组条件下，还没有合适的应用。",
-    "en": "No apps match these choices yet."
+    "zh": "这组条件下，暂无可用的内置应用。",
+    "en": "No built-in apps are available with these choices."
   },
   "apps.emptyText": {
     "zh": "试试其他能力，或调整允许的权限。",
@@ -224,20 +220,20 @@
     "en": "Reset capabilities & permissions"
   },
   "apps.noscript": {
-    "zh": "推荐筛选需要 JavaScript。也可以直接查看",
-    "en": "The interactive filters need JavaScript. You can also browse the"
+    "zh": "硬件匹配与权限演示需要 JavaScript，也可以直接查看",
+    "en": "The hardware and permission preview needs JavaScript. You can also read the"
   },
   "apps.catalog": {
-    "zh": "应用目录",
-    "en": "app catalog"
+    "zh": "应用说明",
+    "en": "app documentation"
   },
   "apps.explore": {
-    "zh": "探索应用目录",
-    "en": "Explore the app catalog"
+    "zh": "查看应用说明",
+    "en": "About the built-in apps"
   },
   "apps.demo": {
-    "zh": "推荐演示 · 安装时以设备实际检测与授权为准。",
-    "en": "Recommendation preview · Your device checks compatibility and permissions when installing."
+    "zh": "内置方案预览 · 根据硬件自动匹配应用，使用权限由你管理。具体功能以新版固件为准。",
+    "en": "Built-in app preview · Apps are selected automatically for the hardware, with permissions under your control. Availability follows the firmware release."
   },
   "apps.basic": {
     "zh": "基础能力",
@@ -451,10 +447,6 @@
     "zh": "书店",
     "en": "Bookshop"
   },
-  "menu.appstore": {
-    "zh": "应用商店",
-    "en": "App store"
-  },
   "menu.weread": {
     "zh": "微信读书",
     "en": "WeRead"
@@ -508,8 +500,8 @@
     "en": "Development preview"
   },
   "flash.releaseNote": {
-    "zh": "当前下载为较早的开发预览版，新书店与自定义菜单以新版发布说明为准。公开构建",
-    "en": "Downloads are an earlier development preview. Check newer release notes for the bookshop and custom menu. Pinned build"
+    "zh": "当前下载为较早的开发预览版。硬件匹配的内置应用、书店与自定义菜单，以后续新版发布说明为准。公开构建",
+    "en": "Downloads are an earlier development preview. See newer release notes for hardware-matched built-in apps, the bookshop and custom menu. Pinned build"
   },
   "flash.brand": {
     "zh": "选择品牌",
@@ -568,12 +560,12 @@
     "en": "Download full image .bin"
   },
   "flash.appDownload": {
-    "zh": "下载应用固件 .bin",
-    "en": "Download app firmware .bin"
+    "zh": "下载固件更新镜像 .bin",
+    "en": "Download firmware update image .bin"
   },
   "flash.appNote": {
-    "zh": "应用固件仅供已有兼容分区布局的同型号设备更新；首次安装请用完整镜像，并阅读发布说明。",
-    "en": "The app binary is for the same model with a compatible partition layout. Use the full image for a first installation and read the release notes."
+    "zh": "更新镜像仅供已有兼容分区布局的同型号设备使用；首次安装请用完整镜像，并阅读发布说明。",
+    "en": "The update image is for the same model with a compatible partition layout. Use the full image for a first installation and read the release notes."
   },
   "flash.release": {
     "zh": "发布说明与全部文件",
@@ -655,14 +647,6 @@
     "zh": "正常开机",
     "en": "Start your device"
   },
-  "flash.openStore": {
-    "zh": "打开「应用 → 应用商店」",
-    "en": "Open Apps → App store"
-  },
-  "flash.installApps": {
-    "zh": "连接 Wi-Fi，安装喜欢的应用",
-    "en": "Connect to Wi-Fi and choose an app"
-  },
   "flash.available": {
     "zh": "{count} 款可下载",
     "en": "{count} available"
@@ -712,8 +696,8 @@
     "en": "Reading, apps and chat have been tried on hardware. The built-in buzzer is not intended for music playback."
   },
   "flash.note.papers3": {
-    "zh": "显示、触摸、阅读、休眠恢复与应用商店已实机体验。",
-    "en": "Display, touch, reading, sleep/resume and the app store have been tried on hardware."
+    "zh": "显示、触摸、阅读、休眠恢复已实机体验。",
+    "en": "Display, touch, reading and sleep/resume have been tried on hardware."
   },
   "flash.supported": {
     "zh": "浏览器支持 Web Serial。准备好数据线，并关闭占用设备的串口工具。",
@@ -800,8 +784,8 @@
     "en": "Installing on {model} · {percent}%"
   },
   "flash.finished": {
-    "zh": "固件已写入。请正常重启设备，再打开「应用 → 应用商店」。若仍在下载模式，请按设备说明退出。",
-    "en": "Firmware written. Restart normally and open Apps → App store. If still in download mode, follow the device’s instructions to exit it."
+    "zh": "固件已写入。请正常重启设备，再查看「应用」中的可用功能。若仍在下载模式，请按设备说明退出。",
+    "en": "Firmware written. Restart normally and explore the available features in Apps. If still in download mode, follow the device’s instructions to exit it."
   },
   "flash.failed_initialize": {
     "zh": "无法进入下载模式。请检查数据线、串口占用，并按下方说明重试。",
@@ -848,20 +832,20 @@
     "en": "Preferences and reading history are used locally on your device. The bookshop fetches book information from an online catalog. Adjust your themes, save books to your wish list, or reduce recommendations you dislike."
   },
   "faq.q2": {
-    "zh": "为什么切换机型，应用推荐会变化？",
-    "en": "Why do recommendations change with my device?"
+    "zh": "为什么不同设备内置的应用不同？",
+    "en": "Why are different apps built into different devices?"
   },
   "faq.a2": {
-    "zh": "应用有不同的硬件与权限需求。先检查设备能力，再核对应用权限。网页展示新版配置，最终以设备实际检测为准。",
-    "en": "Apps need different hardware and permissions. The store checks capabilities first, then permissions. This site previews newer configurations; the device’s checks are authoritative."
+    "zh": "系统会根据屏幕、无线通信、音频、相机等硬件能力，自动选择合适的应用内置。使用时可按应用需要管理权限；网页提供新版方案预览。",
+    "en": "The system automatically selects built-in apps to match the display, wireless, audio, camera and other hardware capabilities. You manage the permissions each app needs. This site previews the upcoming approach."
   },
   "faq.q3": {
-    "zh": "安装新应用，需要重新刷机吗？",
-    "en": "Do I need to flash firmware for every new app?"
+    "zh": "应用还需要单独下载安装吗？",
+    "en": "Do I need to download apps separately?"
   },
   "faq.a3": {
-    "zh": "安装支持应用商店的固件后，可在设备上下载和更新应用。新的系统功能可能需要升级固件，请查看发布说明。",
-    "en": "Once your firmware supports the app store, download and update apps on the device. New system features may require a firmware update; check the release notes."
+    "zh": "后续版本会直接内置与硬件匹配的应用，无需逐个下载安装。内置范围与更新方式以各机型的固件发布说明为准。",
+    "en": "Future releases will include apps matched to the hardware, ready to use without separate downloads. Included apps and update methods are detailed in each model’s firmware release notes."
   },
   "faq.q4": {
     "zh": "能用手机给设备安装固件吗？",
@@ -872,20 +856,20 @@
     "en": "Web flashing requires desktop Chrome or Edge with Web Serial. You can download files on a phone or another browser, then use a computer to install them."
   },
   "faq.q5": {
-    "zh": "应用权限和安装包如何检查？",
-    "en": "How are permissions and packages checked?"
+    "zh": "内置应用的权限如何管理？",
+    "en": "How are permissions managed for built-in apps?"
   },
   "faq.a5": {
-    "zh": "安装前会列出应用权限，可按需授权。当前开发预览的安装包尚未签名，设备端 HTTPS 证书校验仍待完善，请使用可信目录。网页刷机前核对大小与 SHA-256。",
-    "en": "Review and grant permissions before installation. Development-preview packages are not yet signed and device-side HTTPS certificate validation still needs work; use trusted catalogs. Web flashing verifies image size and SHA-256."
+    "zh": "内置应用仍会声明所需的权限，例如网络、阅读记录、相机或照片。你可以按需授权或关闭；关闭后，需要该权限的功能将不可用。网页中的开关仅用于演示。",
+    "en": "Built-in apps still declare the permissions they need, such as network access, reading history, camera or photos. You can allow or deny them; features that need a denied permission will be unavailable. The switches on this page are a preview only."
   },
   "faq.q6": {
-    "zh": "我也想制作一个应用。",
-    "en": "I would like to make an app."
+    "zh": "我有一个应用想法。",
+    "en": "I have an app idea."
   },
   "faq.a6": {
-    "zh": "欢迎用 Lua 把想法带到墨水屏。应用仓库提供现有包、图标、权限声明与开发说明。",
-    "en": "Bring your idea to e-paper with Lua. The repository includes example packages, icons, permission declarations and development notes."
+    "zh": "欢迎分享适合墨水屏的应用想法，或参与内置应用的开发与改进。可以查看项目代码和开发说明。",
+    "en": "Share an app idea for e-paper, or help develop and improve the built-in apps. The project includes source code and development notes."
   },
   "faq.develop": {
     "zh": "查看开发文档",
@@ -1186,5 +1170,17 @@
   "apps.permissionCount.one": {
     "zh": "1 项权限",
     "en": "1 permission"
+  },
+  "apps.available": {
+    "zh": "当前条件下，可用 {count} 款",
+    "en": "{count} available with these choices"
+  },
+  "flash.openApps": {
+    "zh": "打开「应用」",
+    "en": "Open Apps"
+  },
+  "flash.managePermissions": {
+    "zh": "按需设置网络与权限",
+    "en": "Set up network access and permissions"
   }
 }

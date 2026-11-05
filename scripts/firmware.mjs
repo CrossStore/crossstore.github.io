@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 
 export const devices = [
   { id: 'papermono', targetId: 'm5stack_paper_mono', name: 'PaperMono', brand: 'M5STACK', model: 'M5Stack PaperMono', type: 'mono', screen: '随身阅读 · 触控与按键', note: '阅读、应用与聊天已实机体验。内置蜂鸣器不适合音乐播放。' },
-  { id: 'papers3', targetId: 'm5stack_papers3', name: 'PaperS3', brand: 'M5STACK', model: 'M5Stack PaperS3', type: 'paper', screen: '大屏触控 · 16 灰阶', note: '显示、触摸、阅读、休眠恢复与应用商店已实机体验。' },
+  { id: 'papers3', targetId: 'm5stack_papers3', name: 'PaperS3', brand: 'M5STACK', model: 'M5Stack PaperS3', type: 'paper', screen: '大屏触控 · 16 灰阶', note: '显示、触摸、阅读、休眠恢复已实机体验。' },
   { id: 'waveshare-epaper-397', targetId: 'waveshare_epaper_397', name: 'e-Paper 3.97', brand: 'WAVESHARE', model: 'Waveshare ESP32-S3-ePaper-3.97', type: 'wave', screen: '3.97 英寸 · 实体按键', note: '阅读、按键与商店已实机体验。AirTune 可以出声，响度仍待优化。' },
   { id: 'm5paper-v11', targetId: 'm5stack_m5paper_v11', name: 'M5Paper / v1.1', brand: 'M5STACK', model: 'M5Stack M5Paper 初代 / v1.1', models: ['m5paper_v10', 'm5paper_v11'], validationLabel: 'Alpha · 初代基础实测', validationSummary: '初代有基础实测记录，v1.1 未实机测试', type: 'paper', screen: '老款 ESP32 · 16 灰阶', experimental: true, chip: 'ESP32', chipId: 0, bootloaderOffset: 4096, flashFrequency: '40m', note: '初代 M5Paper 与 v1.1 共用此固件，不能与 PaperS3 混刷。初代已验证显示、触摸、轮键、TF 卡、阅读进度和一次休眠恢复；v1.1 未实机测试，仍为 Alpha。完整灰阶、连续休眠和功耗待验收；不支持 USB 磁盘和 wifi_chat。' },
   {"id": "xteink", "targetId": "xteink_x4", "name": "X3 / X4", "brand": "XTEINK", "model": "Xteink X3 / X4", "type": "wave", "screen": "ESP32-C3 · 共用固件", "chip": "ESP32-C3", "chipId": 5, "experimental": true, "note": "Alpha，尚未经过本站维护者的实机测试。显示、输入、TF 卡、联网和休眠均待验收。无 PSRAM，仅开放符合内存条件的应用；此版本未启用聊天服务。"},

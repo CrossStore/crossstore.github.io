@@ -12,7 +12,7 @@ function renderApps() {
   const profile = profiles.find(item => item.id === state.device);
   const { compatible, results } = recommendApps(state);
   $('device-capabilities').textContent = t(`profile.${profile.id}`);
-  $('recommendation-path').innerHTML = `<span>${t('apps.total',{count:apps.length})}</span><em aria-hidden="true">→</em><span>${t('apps.compatible',{model:profile.name,count:compatible.length})}</span><em aria-hidden="true">→</em><strong class="result-count">${t('apps.recommended',{count:results.length})}</strong>`;
+  $('recommendation-path').innerHTML = `<span>${t('apps.total',{count:apps.length})}</span><em aria-hidden="true">→</em><span>${t('apps.compatible',{model:profile.name,count:compatible.length})}</span><em aria-hidden="true">→</em><strong class="result-count">${t('apps.available',{count:results.length})}</strong>`;
   $('app-more').hidden = results.length <= 8;
   $('toggle-apps').textContent = appsExpanded ? t('apps.collapse') : t('apps.expand',{count:results.length});
   $('toggle-apps').setAttribute('aria-expanded', String(appsExpanded));
@@ -61,7 +61,7 @@ renderBooks('scifi');
 const menuOptions = [
   { id: 'shelf', icon: 'book' }, { id: 'calendar', icon: 'calendar' },
   { id: 'apps', icon: 'apps' }, { id: 'settings', icon: 'settings' },
-  { id: 'bookstore', icon: 'store' }, { id: 'appstore', icon: 'appstore', app: true },
+  { id: 'bookstore', icon: 'store' },
   { id: 'weread', icon: 'weread', app: true }, { id: 'game2048', icon: 'game2048', app: true },
   { id: 'files', icon: 'files' },
 ];
