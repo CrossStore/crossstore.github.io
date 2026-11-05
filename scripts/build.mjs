@@ -1,5 +1,6 @@
 import { readFile, writeFile, mkdir, cp, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 import { devices, pendingDevices, validateRelease, verifyAsset, verifyDevice } from './firmware.mjs';
 import { issueLink } from '../src/integrity.js';
@@ -48,6 +49,25 @@ const models = devices.filter(device => featuredIds.has(device.id)).sort((a, b) 
 });
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const icon = id => `<img src="/assets/app-icons/${id}.svg" width="64" height="64" alt="" loading="lazy">`;
+// A cached HTML entry must never combine a new page with a previous CSS/JS
+// release. GitHub Pages caches assets for ten minutes; content names invalidate
+// each dependency independently without changing language or anchor URLs.
+async function publishTextAsset(sourcePath, stem, extension) {
+  const bytes = await readFile(sourcePath);
+  const digest = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  const url = `/assets/${stem}-${digest}.${extension}`;
+  await writeFile(`dist${url}`, bytes);
+  return url;
+}
+await mkdir('dist/assets', {recursive:true});
+const styleAsset = await publishTextAsset('public/style.css', 'style', 'css');
+const languageAsset = await publishTextAsset('public/language.js', 'language', 'js');
+const bundle = await build({entryPoints:['src/app.js'],bundle:true,splitting:true,format:'esm',outdir:'dist/assets',entryNames:'[name]-[hash]',metafile:true,minify:true,target:['es2022'],legalComments:'linked'});
+const appOutput = Object.entries(bundle.metafile.outputs).find(([, metadata]) => metadata.entryPoint === 'src/app.js')?.[0];
+if (!appOutput) throw new Error('Missing application entry bundle');
+const appAsset = '/' + appOutput.replace(/^dist\//, '');
+// Retain the former entry URL for HTML cached from the preceding release.
+await cp(appOutput, 'dist/assets/app.js');
 const source = await readFile('src/index.html', 'utf8');
 const credits = await readFile('src/credits.html', 'utf8');
 const brands = [...new Set([...models, ...pendingDevices].map(d => d.brand))];
@@ -59,6 +79,7 @@ for (const locale of ['zh', 'en']) {
   const localizedModels = models.map(d => ({...d, screen: t(`flash.spec.${d.id}`), note: t(`flash.note.${d.id}`)}));
   const values = {
     LANG: locale === 'en' ? 'en' : 'zh-CN', HOME: root, OTHER_HOME: other,
+    STYLE_ASSET: styleAsset, LANGUAGE_ASSET: languageAsset, APP_ASSET: appAsset,
     OTHER_LANG: otherLocale, OTHER_HTML_LANG: otherLocale === 'zh' ? 'zh-CN' : 'en',
     OTHER_LABEL: locale === 'en' ? '中文' : 'EN', CREDITS: `${root}credits.html`, OTHER_CREDITS: `${other}credits.html`,
     RELEASE_URL: release.releaseUrl, SHORT_SHA: release.sourceSha.slice(0, 7),
@@ -90,5 +111,4 @@ for (const locale of ['zh', 'en']) {
 }
 await writeFile('dist/.nojekyll','');
 await writeFile('dist/firmware-release.json',JSON.stringify(release,null,2));
-await build({entryPoints:['src/app.js'],bundle:true,splitting:true,format:'esm',outdir:'dist/assets',minify:true,target:['es2022'],legalComments:'linked'});
 console.log(`Built Chinese and English CrossStore pages with ${models.length} verified device images.`);

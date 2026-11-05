@@ -126,3 +126,13 @@ sans-serif family and zero extra character spacing in titles and the hero. A
 separate `--display` token keeps English editorial headings and the serif wordmark
 unchanged. The photograph, grayscale palette, spacing and rules carry the reading
 atmosphere without making small Chinese controls look like printed book titles.
+
+
+## Deployment cache boundary
+
+GitHub Pages serves static assets with a ten-minute cache lifetime. The production
+build gives CSS, language preference code and the application entry bundle
+content-derived filenames, shared by both locales and credits. Page templates
+reference those names, so cached scripts/styles from a previous design cannot be
+mixed with new HTML. The former `/assets/app.js` URL remains a compatibility alias
+for cached HTML from the preceding release.

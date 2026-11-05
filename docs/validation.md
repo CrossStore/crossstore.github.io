@@ -74,3 +74,11 @@ The website's USB flashing path still needs a real-device acceptance run for eac
   768, 1024 and 1440 px, and credits at 320/1440 px, have no horizontal overflow.
 - Review captures: `output/playwright/font-zh-after-hero.png`,
   `font-zh-after-mobile.png` and `font-zh-apps-mobile.png`.
+
+## Publication cache check — 2026-11-05
+
+The first live upgrade reproduced new HTML with cached old CSS/JavaScript, leaving
+app recommendations empty. The build now uses content-versioned asset filenames.
+A headless browser check replaced all three legacy CSS/JS URLs with invalid old
+responses: neither locale nor either credits page requested them, and both app
+lists rendered. All 17 tests and the production build passed again.
