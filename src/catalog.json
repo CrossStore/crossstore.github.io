@@ -1,0 +1,256 @@
+[
+  {
+    "id": "weread",
+    "name": {
+      "en": "WeRead",
+      "zh": "微信读书"
+    },
+    "requires": [
+      "wifi",
+      "psram"
+    ],
+    "permissions": [
+      "network",
+      "reading_data",
+      "keep_awake"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/weread"
+  },
+  {
+    "id": "airtune",
+    "name": {
+      "en": "Internet Radio",
+      "zh": "网络电台"
+    },
+    "requires": [
+      "wifi",
+      "psram",
+      "radio_audio"
+    ],
+    "permissions": [
+      "network",
+      "sound",
+      "keep_awake"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/airtune"
+  },
+  {
+    "id": "game2048",
+    "name": {
+      "en": "2048",
+      "zh": "2048"
+    },
+    "requires": [],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/game2048"
+  },
+  {
+    "id": "gomoku",
+    "name": {
+      "en": "Gomoku",
+      "zh": "五子棋"
+    },
+    "requires": [],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/gomoku"
+  },
+  {
+    "id": "calculator",
+    "name": {
+      "en": "Calculator",
+      "zh": "计算器"
+    },
+    "requires": [],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/calculator"
+  },
+  {
+    "id": "sudoku",
+    "name": {
+      "en": "Sudoku",
+      "zh": "数独"
+    },
+    "requires": [
+      "touch"
+    ],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/sudoku"
+  },
+  {
+    "id": "chinese_chess",
+    "name": {
+      "en": "Chinese Chess",
+      "zh": "中国象棋"
+    },
+    "requires": [
+      "touch"
+    ],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/chinese_chess"
+  },
+  {
+    "id": "minesweeper",
+    "name": {
+      "en": "Minesweeper",
+      "zh": "扫雷"
+    },
+    "requires": [
+      "touch"
+    ],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/minesweeper"
+  },
+  {
+    "id": "camera",
+    "name": {
+      "en": "Camera",
+      "zh": "相机"
+    },
+    "requires": [
+      "camera",
+      "psram",
+      "storage",
+      "camera_preview",
+      "app_launch",
+      "photo_library"
+    ],
+    "permissions": [
+      "camera"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/camera"
+  },
+  {
+    "id": "gallery",
+    "name": {
+      "en": "Gallery",
+      "zh": "相册"
+    },
+    "requires": [
+      "storage",
+      "photo_library",
+      "app_launch"
+    ],
+    "permissions": [
+      "photos"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/gallery"
+  },
+  {
+    "id": "rf_chat",
+    "name": {
+      "en": "rf_chat",
+      "zh": "rf_chat"
+    },
+    "requires": [
+      "lora",
+      "psram"
+    ],
+    "permissions": [
+      "radio",
+      "notifications",
+      "background",
+      "camera"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/rf_chat"
+  },
+  {
+    "id": "wifi_chat",
+    "name": {
+      "en": "wifi_chat",
+      "zh": "wifi_chat"
+    },
+    "requires": [
+      "wifi",
+      "tox",
+      "psram"
+    ],
+    "permissions": [
+      "network",
+      "notifications",
+      "background",
+      "camera"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/wifi_chat"
+  },
+  {
+    "id": "esp_chat",
+    "name": {
+      "en": "esp_chat",
+      "zh": "esp_chat"
+    },
+    "requires": [
+      "esp_now",
+      "psram"
+    ],
+    "permissions": [
+      "radio",
+      "notifications",
+      "background"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/esp_chat"
+  },
+  {
+    "id": "reading_stats",
+    "name": {
+      "en": "Reading Calendar",
+      "zh": "阅读日历"
+    },
+    "requires": [],
+    "permissions": [
+      "reading_data"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/reading_stats"
+  },
+  {
+    "id": "woodfish",
+    "name": {
+      "en": "Woodfish",
+      "zh": "木鱼"
+    },
+    "requires": [],
+    "permissions": [
+      "sound"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/woodfish"
+  },
+  {
+    "id": "book_store",
+    "name": {
+      "en": "Book Store",
+      "zh": "书店"
+    },
+    "requires": [
+      "wifi",
+      "psram"
+    ],
+    "permissions": [
+      "network",
+      "reading_data",
+      "files_export"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/book_store"
+  },
+  {
+    "id": "library",
+    "name": {
+      "en": "Library",
+      "zh": "书库"
+    },
+    "requires": [],
+    "permissions": [],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/library"
+  },
+  {
+    "id": "standby",
+    "name": {
+      "en": "Standby",
+      "zh": "待机时钟"
+    },
+    "requires": [],
+    "permissions": [
+      "network",
+      "keep_awake"
+    ],
+    "source": "https://github.com/CrossStore/CrossStore/tree/main/packages/standby"
+  }
+]

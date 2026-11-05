@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 
 export const devices = [
-  { id: 'papermono', targetId: 'm5stack_paper_mono', name: 'PaperMono', brand: 'M5STACK', model: 'M5Stack PaperMono', type: 'mono', screen: '紧凑屏幕 · 实体按键', note: '阅读、应用与聊天已实机体验。内置蜂鸣器不适合音乐播放。' },
+  { id: 'papermono', targetId: 'm5stack_paper_mono', name: 'PaperMono', brand: 'M5STACK', model: 'M5Stack PaperMono', type: 'mono', screen: '随身阅读 · 触控与按键', note: '阅读、应用与聊天已实机体验。内置蜂鸣器不适合音乐播放。' },
   { id: 'papers3', targetId: 'm5stack_papers3', name: 'PaperS3', brand: 'M5STACK', model: 'M5Stack PaperS3', type: 'paper', screen: '大屏触控 · 16 灰阶', note: '显示、触摸、阅读、休眠恢复与应用商店已实机体验。' },
   { id: 'waveshare-epaper-397', targetId: 'waveshare_epaper_397', name: 'e-Paper 3.97', brand: 'WAVESHARE', model: 'Waveshare ESP32-S3-ePaper-3.97', type: 'wave', screen: '3.97 英寸 · 实体按键', note: '阅读、按键与商店已实机体验。AirTune 可以出声，响度仍待优化。' },
   { id: 'm5paper-v11', targetId: 'm5stack_m5paper_v11', name: 'M5Paper / v1.1', brand: 'M5STACK', model: 'M5Stack M5Paper 初代 / v1.1', models: ['m5paper_v10', 'm5paper_v11'], validationLabel: 'Alpha · 初代基础实测', validationSummary: '初代有基础实测记录，v1.1 未实机测试', type: 'paper', screen: '老款 ESP32 · 16 灰阶', experimental: true, chip: 'ESP32', chipId: 0, bootloaderOffset: 4096, flashFrequency: '40m', note: '初代 M5Paper 与 v1.1 共用此固件，不能与 PaperS3 混刷。初代已验证显示、触摸、轮键、TF 卡、阅读进度和一次休眠恢复；v1.1 未实机测试，仍为 Alpha。完整灰阶、连续休眠和功耗待验收；不支持 USB 磁盘和 wifi_chat。' },
@@ -60,6 +60,6 @@ export function verifyDevice(device, release, files) {
 export const pendingDevices = [{
   id: 'metalio-eink4-plus-ml307', name: 'Ink4 Plus · ML307', brand: 'METALIO',
   model: 'Metalio E-Ink4 Plus with ML307 4G', experimental: true, available: false,
-  version: '尚无匹配的 CrossMux 固件',
-  note: '已确认 ML307 模组与厂商双网络代码；ESP32-S31 平台、并行屏幕及 4G 联网仍待适配。这里不提供旧款 Ink4 或 S3 的替代固件。',
+  version: '公开固件待发布',
+  note: '新版阅读界面正在实机测试。本站尚未收录匹配的公开固件，发布后提供下载与安装入口。',
 }];

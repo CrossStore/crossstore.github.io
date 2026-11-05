@@ -1,7 +1,7 @@
 export async function verifyDownload(buffer, asset, subtle = globalThis.crypto.subtle) {
-  if (buffer.byteLength !== asset.bytes) throw new Error('固件下载不完整，请重新校验。');
+  if (buffer.byteLength !== asset.bytes) throw Object.assign(new Error('固件下载不完整，请重新校验。'), {code:'truncated'});
   const hash = Array.from(new Uint8Array(await subtle.digest('SHA-256', buffer)), b => b.toString(16).padStart(2, '0')).join('');
-  if (hash !== asset.sha256) throw new Error('固件校验失败，已阻止刷写。请稍后重试。');
+  if (hash !== asset.sha256) throw Object.assign(new Error('固件校验失败，已阻止刷写。请稍后重试。'), {code:'hash'});
 }
 
 export function flashManifest(model, blobUrl) {
@@ -10,11 +10,33 @@ export function flashManifest(model, blobUrl) {
   return { name: `CrossStore · ${model.model}`, version: model.version, builds: [{ chipFamily: chips[model.id], parts: [{ path: blobUrl, offset: 0 }] }] };
 }
 
-export function issueLink(model, release) {
+export function issueLink(model, release, locale = 'zh') {
+  if (locale === 'en') {
+    const params = new URLSearchParams({
+      title: `[${model.available === false ? 'Testing feedback' : model.experimental ? 'Alpha' : 'Bug'}][${model.model}] Describe the issue`,
+      body: `Model: ${model.model}
+Validation: ${model.available === false ? 'In testing; public firmware pending' : model.experimental ? 'Alpha; not verified on hardware' : 'Hardware testing recorded'}
+Firmware: ${model.version}
+CrossMux: ${release.sourceSha}
+SDK: ${release.sdkSha}
+Release: ${release.releaseUrl}
+
+Steps to reproduce:
+1.
+
+Expected behavior:
+
+Actual behavior:
+
+Logs or photos:
+`,
+    });
+    return `https://github.com/zhuzhe1983/crossmux/issues/new?${params}`;
+  }
   const params = new URLSearchParams({
-    title: `[${model.available === false ? '适配' : model.experimental ? 'Alpha' : 'Bug'}][${model.model}] 请填写问题摘要`,
+    title: `[${model.available === false ? '测试反馈' : model.experimental ? 'Alpha' : 'Bug'}][${model.model}] 请填写问题摘要`,
     body: `设备 / Model: ${model.model}
-验证状态: ${model.available === false ? '待适配，暂无可刷写固件' : model.validationSummary || (model.experimental ? 'Alpha，未经实机测试' : '已有实机测试记录')}
+验证状态: ${model.available === false ? '正在测试，公开固件待发布' : model.validationSummary || (model.experimental ? 'Alpha，未经实机测试' : '已有实机测试记录')}
 固件 / Firmware: ${model.version}
 CrossMux: ${release.sourceSha}
 SDK: ${release.sdkSha}

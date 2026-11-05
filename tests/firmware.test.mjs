@@ -112,7 +112,7 @@ test('issue links include the selected model, alpha status and immutable source'
 test('pending Ink4 Plus cannot enter flash transport, and alpha labels cannot be promoted', () => {
   for (const d of pendingDevices) {
     assert.throws(() => flashManifest(d, 'blob:unavailable'));
-    assert.match(new URL(issueLink(d, release)).searchParams.get('body'), /待适配，暂无可刷写固件/);
+    assert.match(new URL(issueLink(d, release)).searchParams.get('body'), /正在测试，公开固件待发布/);
   }
   const d = devices.find(d => d.id === 'xteink');
   const f = fixture(d); verifyDevice(d, release, f.files);

@@ -1,0 +1,1190 @@
+{
+  "meta.title": {
+    "zh": "CrossStore — 阅读，和你的更多日常",
+    "en": "CrossStore — Reading, and a little more of life"
+  },
+  "meta.description": {
+    "zh": "个人书店、阅读日历与适合设备的应用。为墨水屏留一点想象。",
+    "en": "A personal bookshop, a reading calendar and apps that fit your device. A little more life on e-paper."
+  },
+  "skip": {
+    "zh": "跳转到正文",
+    "en": "Skip to content"
+  },
+  "nav.label": {
+    "zh": "主导航",
+    "en": "Main navigation"
+  },
+  "nav.home": {
+    "zh": "CrossStore 首页",
+    "en": "CrossStore home"
+  },
+  "nav.store": {
+    "zh": "书店",
+    "en": "Bookshop"
+  },
+  "nav.apps": {
+    "zh": "应用生态",
+    "en": "Apps"
+  },
+  "nav.calendar": {
+    "zh": "阅读日历",
+    "en": "Reading calendar"
+  },
+  "nav.menu": {
+    "zh": "自定义菜单",
+    "en": "Your menu"
+  },
+  "nav.install": {
+    "zh": "为设备安装",
+    "en": "Get started"
+  },
+  "nav.language": {
+    "zh": "切换语言",
+    "en": "Change language"
+  },
+  "hero.title": {
+    "zh": "阅读，和你的<br>更多日常。",
+    "en": "Reading, and a little<br>more of life."
+  },
+  "hero.description": {
+    "zh": "发现下一本好书，装上喜欢的应用。",
+    "en": "Find your next book. Make room for the apps you love."
+  },
+  "hero.primary": {
+    "zh": "发现下一本",
+    "en": "Find your next read"
+  },
+  "hero.secondary": {
+    "zh": "探索应用",
+    "en": "Explore the apps"
+  },
+  "hero.caption": {
+    "zh": "书页之间，自有天地。",
+    "en": "A little world between the pages."
+  },
+  "hero.imageNote": {
+    "zh": "意境示意",
+    "en": "An imagined reading moment"
+  },
+  "preview": {
+    "zh": "新版预览",
+    "en": "New version preview"
+  },
+  "book.title": {
+    "zh": "好书很多。<br>从你喜欢的开始。",
+    "en": "So many books.<br>Start with what you love."
+  },
+  "book.description": {
+    "zh": "从喜欢的主题、作者和阅读记录出发，在精选书单里遇见下一本。",
+    "en": "Follow your favourite themes, authors and reading history to your next discovery."
+  },
+  "book.point1": {
+    "zh": "推荐有理由",
+    "en": "A reason for every recommendation"
+  },
+  "book.detail1": {
+    "zh": "按个人偏好挑选，也可以减少不喜欢的内容。",
+    "en": "Shape your recommendations with your preferences and feedback."
+  },
+  "book.point2": {
+    "zh": "先放进想读，再慢慢读",
+    "en": "Save it for a quiet moment"
+  },
+  "book.detail2": {
+    "zh": "收藏想读的书，下载后离线阅读。",
+    "en": "Keep a wish list, then download a book to read offline."
+  },
+  "book.point3": {
+    "zh": "偏好留在设备里",
+    "en": "Your preferences stay with you"
+  },
+  "book.detail3": {
+    "zh": "阅读记录与推荐偏好在本地处理。",
+    "en": "Reading history and preferences are processed on your device."
+  },
+  "book.scifi": {
+    "zh": "科幻与想象",
+    "en": "Science & imagination"
+  },
+  "book.literature": {
+    "zh": "文学与生活",
+    "en": "Literature & life"
+  },
+  "book.topicsLabel": {
+    "zh": "书店推荐演示：选择阅读偏好",
+    "en": "Bookshop preview: choose a reading preference"
+  },
+  "book.reason.scifi": {
+    "zh": "因为你喜欢科幻，看看这些关于宇宙的故事。",
+    "en": "For your love of science fiction: stories beyond our own world."
+  },
+  "book.reason.literature": {
+    "zh": "因为你喜欢文学，读一读那些关于生活的故事。",
+    "en": "For your love of literature: stories about being human."
+  },
+  "book.demo": {
+    "zh": "推荐示意 · 切换偏好，发现不同书单",
+    "en": "Recommendation preview · Try a different preference"
+  },
+  "book.noscript": {
+    "zh": "启用 JavaScript 可体验偏好切换。",
+    "en": "Enable JavaScript to try the reading preferences."
+  },
+  "book.cover": {
+    "zh": "《{title}》封面",
+    "en": "Cover of {title}"
+  },
+  "apps.title": {
+    "zh": "适合你的，先看见。",
+    "en": "Made for the way you read."
+  },
+  "apps.description": {
+    "zh": "读书、工具、游戏、连接彼此。<br>先匹配机型，再按能力与权限筛选。",
+    "en": "Reading, small tools, a little play.<br>Match your model, then choose capabilities and permissions."
+  },
+  "apps.model": {
+    "zh": "机型",
+    "en": "Device"
+  },
+  "apps.modelLabel": {
+    "zh": "应用推荐机型",
+    "en": "Device for app recommendations"
+  },
+  "apps.capability": {
+    "zh": "能力与权限",
+    "en": "Capabilities & permissions"
+  },
+  "apps.capabilityLabel": {
+    "zh": "按应用能力筛选",
+    "en": "Filter apps by capability"
+  },
+  "apps.all": {
+    "zh": "全部",
+    "en": "All"
+  },
+  "apps.offline": {
+    "zh": "离线使用",
+    "en": "Offline"
+  },
+  "apps.audio": {
+    "zh": "音频",
+    "en": "Audio"
+  },
+  "apps.camera": {
+    "zh": "相机",
+    "en": "Camera"
+  },
+  "apps.permissions": {
+    "zh": "管理推荐中的权限",
+    "en": "Choose allowed permissions"
+  },
+  "apps.permissionsHint": {
+    "zh": "取消你不想开放的权限，隐藏需要它们的应用。这里只调整网页推荐，不会修改设备授权。",
+    "en": "Uncheck a permission to hide apps that need it. These choices filter this preview; they do not grant permissions on your device."
+  },
+  "apps.allPermissions": {
+    "zh": "允许全部声明权限",
+    "en": "All declared permissions allowed"
+  },
+  "apps.somePermissions": {
+    "zh": "允许 {count} / {total} 项权限",
+    "en": "{count} of {total} permissions allowed"
+  },
+  "apps.total": {
+    "zh": "{count} 款应用",
+    "en": "{count} apps"
+  },
+  "apps.compatible": {
+    "zh": "{model} 能力匹配 {count}",
+    "en": "{count} match {model}"
+  },
+  "apps.recommended": {
+    "zh": "按当前能力与权限，推荐 {count} 款",
+    "en": "Recommended: {count}"
+  },
+  "apps.expand": {
+    "zh": "展开全部 {count} 款应用 ↓",
+    "en": "Show all {count} apps ↓"
+  },
+  "apps.collapse": {
+    "zh": "收起应用 ↑",
+    "en": "Show fewer apps ↑"
+  },
+  "apps.emptyTitle": {
+    "zh": "这组条件下，还没有合适的应用。",
+    "en": "No apps match these choices yet."
+  },
+  "apps.emptyText": {
+    "zh": "试试其他能力，或调整允许的权限。",
+    "en": "Try another capability or adjust the allowed permissions."
+  },
+  "apps.reset": {
+    "zh": "重置能力与权限",
+    "en": "Reset capabilities & permissions"
+  },
+  "apps.noscript": {
+    "zh": "推荐筛选需要 JavaScript。也可以直接查看",
+    "en": "The interactive filters need JavaScript. You can also browse the"
+  },
+  "apps.catalog": {
+    "zh": "应用目录",
+    "en": "app catalog"
+  },
+  "apps.explore": {
+    "zh": "探索应用目录",
+    "en": "Explore the app catalog"
+  },
+  "apps.demo": {
+    "zh": "推荐演示 · 安装时以设备实际检测与授权为准。",
+    "en": "Recommendation preview · Your device checks compatibility and permissions when installing."
+  },
+  "apps.basic": {
+    "zh": "基础能力",
+    "en": "Core features"
+  },
+  "apps.noPermissions": {
+    "zh": "无需额外权限",
+    "en": "No extra permissions"
+  },
+  "apps.permissionCount": {
+    "zh": "{count} 项权限",
+    "en": "{count} permissions"
+  },
+  "apps.accessible": {
+    "zh": "{title}：{description}；{permissions}。查看应用说明",
+    "en": "{title}: {description}. {permissions}. View app details"
+  },
+  "apps.requires": {
+    "zh": "需要 {permissions}",
+    "en": "Requires {permissions}"
+  },
+  "apps.buzzer": {
+    "zh": "蜂鸣器播放，适合语音电台",
+    "en": "Buzzer playback, best for spoken audio"
+  },
+  "profile.papers3": {
+    "zh": "触控阅读 · Wi-Fi · 本地存储",
+    "en": "Touch · Wi-Fi · Local storage"
+  },
+  "profile.papermono": {
+    "zh": "触控阅读 · Wi-Fi · LoRa · 蜂鸣器音频",
+    "en": "Touch · Wi-Fi · LoRa · Buzzer audio"
+  },
+  "profile.ink4-plus": {
+    "zh": "触控阅读 · Wi-Fi / 4G · 相机 · 音频",
+    "en": "Touch · Wi-Fi / 4G · Camera · Audio"
+  },
+  "permission.network": {
+    "zh": "网络访问",
+    "en": "Network access"
+  },
+  "permission.reading_data": {
+    "zh": "阅读记录",
+    "en": "Reading history"
+  },
+  "permission.files_export": {
+    "zh": "保存文件",
+    "en": "Save files"
+  },
+  "permission.sound": {
+    "zh": "声音播放",
+    "en": "Sound playback"
+  },
+  "permission.radio": {
+    "zh": "无线通信",
+    "en": "Radio communication"
+  },
+  "permission.camera": {
+    "zh": "相机",
+    "en": "Camera"
+  },
+  "permission.photos": {
+    "zh": "照片",
+    "en": "Photos"
+  },
+  "permission.notifications": {
+    "zh": "通知",
+    "en": "Notifications"
+  },
+  "permission.background": {
+    "zh": "后台运行",
+    "en": "Background activity"
+  },
+  "permission.keep_awake": {
+    "zh": "保持唤醒",
+    "en": "Keep awake"
+  },
+  "permission.device_info": {
+    "zh": "设备信息",
+    "en": "Device information"
+  },
+  "permission.wallpaper": {
+    "zh": "壁纸",
+    "en": "Wallpaper"
+  },
+  "capability.wifi": {
+    "zh": "Wi-Fi",
+    "en": "Wi-Fi"
+  },
+  "capability.touch": {
+    "zh": "触控",
+    "en": "Touch"
+  },
+  "capability.lora": {
+    "zh": "LoRa",
+    "en": "LoRa"
+  },
+  "capability.radio_audio": {
+    "zh": "音频",
+    "en": "Audio"
+  },
+  "capability.camera": {
+    "zh": "相机",
+    "en": "Camera"
+  },
+  "capability.storage": {
+    "zh": "本地存储",
+    "en": "Local storage"
+  },
+  "calendar.title": {
+    "zh": "把读过的时光，<br>留在日历里。",
+    "en": "Keep a little record<br>of time well read."
+  },
+  "calendar.description": {
+    "zh": "哪天读了什么，又读了多久。<br>翻开阅读日历，回看每一天的小小积累。",
+    "en": "What you read, and when you made the time.<br>Look back on the small moments that add up."
+  },
+  "calendar.month": {
+    "zh": "2026 年 11 月",
+    "en": "November 2026"
+  },
+  "calendar.days": {
+    "zh": "日,一,二,三,四,五,六",
+    "en": "S,M,T,W,T,F,S"
+  },
+  "calendar.caption": {
+    "zh": "阅读日历 · 界面示意",
+    "en": "Reading calendar · Interface preview"
+  },
+  "calendar.summary": {
+    "zh": "12 个阅读日",
+    "en": "12 reading days"
+  },
+  "calendar.total": {
+    "zh": "本月阅读",
+    "en": "Time with books"
+  },
+  "calendar.hours": {
+    "zh": "8 小时 42 分",
+    "en": "8 h 42 min"
+  },
+  "calendar.day": {
+    "zh": "{day} 日，{status}",
+    "en": "Day {day}, {status}"
+  },
+  "calendar.read": {
+    "zh": "有阅读记录",
+    "en": "reading recorded"
+  },
+  "calendar.unread": {
+    "zh": "暂无阅读记录",
+    "en": "no reading recorded"
+  },
+  "menu.title": {
+    "zh": "常用的，<br>放在顺手的地方。",
+    "en": "Keep your favourites<br>close at hand."
+  },
+  "menu.description": {
+    "zh": "把书店放在第一位，把喜欢的应用放进来。<br>增删入口、调整顺序，留下你的日常。",
+    "en": "Put your bookshop first. Add an app you love.<br>Choose and arrange the things you reach for most."
+  },
+  "menu.instruction": {
+    "zh": "试着调整菜单，预览会同步变化。",
+    "en": "Try arranging the menu. The preview follows along."
+  },
+  "menu.demo": {
+    "zh": "网页交互演示，不会更改设备设置。",
+    "en": "An interactive preview. Your device settings stay unchanged."
+  },
+  "menu.heading": {
+    "zh": "我的主菜单",
+    "en": "My main menu"
+  },
+  "menu.reset": {
+    "zh": "恢复默认 ↺",
+    "en": "Reset ↺"
+  },
+  "menu.choose": {
+    "zh": "选择要添加的菜单入口",
+    "en": "Choose a menu item to add"
+  },
+  "menu.add": {
+    "zh": "添加",
+    "en": "Add"
+  },
+  "menu.preview": {
+    "zh": "主菜单预览",
+    "en": "Menu preview"
+  },
+  "menu.limit": {
+    "zh": "最多 5 个入口",
+    "en": "Up to 5 items"
+  },
+  "menu.shelf": {
+    "zh": "书架",
+    "en": "Bookshelf"
+  },
+  "menu.calendar": {
+    "zh": "阅读日历",
+    "en": "Reading calendar"
+  },
+  "menu.apps": {
+    "zh": "应用",
+    "en": "Apps"
+  },
+  "menu.settings": {
+    "zh": "设置",
+    "en": "Settings"
+  },
+  "menu.bookstore": {
+    "zh": "书店",
+    "en": "Bookshop"
+  },
+  "menu.appstore": {
+    "zh": "应用商店",
+    "en": "App store"
+  },
+  "menu.weread": {
+    "zh": "微信读书",
+    "en": "WeRead"
+  },
+  "menu.game2048": {
+    "zh": "2048",
+    "en": "2048"
+  },
+  "menu.files": {
+    "zh": "文件",
+    "en": "Files"
+  },
+  "menu.up": {
+    "zh": "上移{name}",
+    "en": "Move {name} up"
+  },
+  "menu.down": {
+    "zh": "下移{name}",
+    "en": "Move {name} down"
+  },
+  "menu.remove": {
+    "zh": "移除{name}",
+    "en": "Remove {name}"
+  },
+  "menu.count": {
+    "zh": "已选择 {count} / 5 个入口，可用箭头调整顺序。",
+    "en": "{count} of 5 items selected. Use the arrows to reorder."
+  },
+  "menu.updated": {
+    "zh": "预览已更新，当前 {count} 个入口。",
+    "en": "Preview updated. Menu items: {count}."
+  },
+  "menu.added": {
+    "zh": "已添加{name}，当前 {count} / 5 个入口。",
+    "en": "Added {name}. {count} of 5 items selected."
+  },
+  "menu.restored": {
+    "zh": "已恢复默认菜单：书架、阅读日历、应用、设置。",
+    "en": "Default menu restored: Bookshelf, Reading calendar, Apps, Settings."
+  },
+  "flash.title": {
+    "zh": "从你的设备开始。",
+    "en": "A new chapter for your device."
+  },
+  "flash.intro": {
+    "zh": "无需另装刷机软件。<br>在桌面版 Chrome 或 Edge 中完成。",
+    "en": "No separate flashing software.<br>Use Chrome or Edge on your computer."
+  },
+  "flash.preview": {
+    "zh": "开发预览版",
+    "en": "Development preview"
+  },
+  "flash.releaseNote": {
+    "zh": "当前下载为较早的开发预览版，新书店与自定义菜单以新版发布说明为准。公开构建",
+    "en": "Downloads are an earlier development preview. Check newer release notes for the bookshop and custom menu. Pinned build"
+  },
+  "flash.brand": {
+    "zh": "选择品牌",
+    "en": "Choose a brand"
+  },
+  "flash.brandLabel": {
+    "zh": "选择设备品牌",
+    "en": "Choose your device brand"
+  },
+  "flash.initialFilter": {
+    "zh": "先选择品牌，再查看对应型号。",
+    "en": "Choose a brand to see its models."
+  },
+  "flash.model": {
+    "zh": "选择设备型号",
+    "en": "Choose your exact model"
+  },
+  "flash.testingNote": {
+    "zh": "新版功能持续测试中，实测范围请查看机型说明。",
+    "en": "New features are being tested. See each model’s notes for the current scope."
+  },
+  "flash.select": {
+    "zh": "先选择你的设备",
+    "en": "Choose your device first"
+  },
+  "flash.selectNote": {
+    "zh": "请核对设备的完整型号。浏览器只能核对芯片类型，无法识别同芯片的不同板型。",
+    "en": "Check the exact model. Your browser can identify the chip, but not different boards using the same chip."
+  },
+  "flash.issue": {
+    "zh": "提交问题",
+    "en": "Report an issue"
+  },
+  "flash.version": {
+    "zh": "固件",
+    "en": "Firmware"
+  },
+  "flash.size": {
+    "zh": "大小",
+    "en": "Size"
+  },
+  "flash.method": {
+    "zh": "方式",
+    "en": "Method"
+  },
+  "flash.fullMethod": {
+    "zh": "完整刷写 · 0x0",
+    "en": "Full installation · 0x0"
+  },
+  "flash.downloads": {
+    "zh": "下载文件 / 查看校验值",
+    "en": "Download files / checksums"
+  },
+  "flash.fullDownload": {
+    "zh": "下载完整镜像 .bin",
+    "en": "Download full image .bin"
+  },
+  "flash.appDownload": {
+    "zh": "下载应用固件 .bin",
+    "en": "Download app firmware .bin"
+  },
+  "flash.appNote": {
+    "zh": "应用固件仅供已有兼容分区布局的同型号设备更新；首次安装请用完整镜像，并阅读发布说明。",
+    "en": "The app binary is for the same model with a compatible partition layout. Use the full image for a first installation and read the release notes."
+  },
+  "flash.release": {
+    "zh": "发布说明与全部文件",
+    "en": "Release notes & files"
+  },
+  "flash.checksum": {
+    "zh": "完整镜像 SHA-256",
+    "en": "Full image SHA-256"
+  },
+  "flash.confirm": {
+    "zh": "准备与确认",
+    "en": "Prepare & confirm"
+  },
+  "flash.warningStrong": {
+    "zh": "完整刷写会清除设备内部的原固件和设置。",
+    "en": "A full installation erases the existing firmware and internal settings."
+  },
+  "flash.warning": {
+    "zh": "请先备份。TF 卡不会被刷写，仍建议备份书籍与应用数据；开机前插好 FAT32 格式的 TF 卡。",
+    "en": "Back up first. The microSD card is not flashed, but back up its books and app data too. Insert a FAT32 microSD card before starting the device."
+  },
+  "flash.ack": {
+    "zh": "我已核对型号，并了解完整刷写的影响。",
+    "en": "I have checked the model and understand the effects of a full installation."
+  },
+  "flash.ackModel": {
+    "zh": "我确认设备是 {model}，已备份并同意清除设备内部的原固件和设置。",
+    "en": "I confirm this is a {model}, have made a backup, and agree to erase its existing firmware and internal settings."
+  },
+  "flash.checkBrowser": {
+    "zh": "正在检查浏览器是否支持 USB 刷写…",
+    "en": "Checking this browser’s USB flashing support…"
+  },
+  "flash.prepare": {
+    "zh": "下载并校验固件 ↓",
+    "en": "Download & verify firmware ↓"
+  },
+  "flash.connect": {
+    "zh": "连接 USB 并开始完整刷写 ↗",
+    "en": "Connect USB & install firmware ↗"
+  },
+  "flash.progress": {
+    "zh": "固件刷写进度",
+    "en": "Firmware installation progress"
+  },
+  "flash.initialStatus": {
+    "zh": "选择型号后继续。固件将从本站下载。",
+    "en": "Choose your model to continue. Firmware is downloaded from this site."
+  },
+  "flash.helpTitle": {
+    "zh": "连接不上，或不清楚怎样进入下载模式？",
+    "en": "Need help connecting or entering download mode?"
+  },
+  "flash.help1": {
+    "zh": "使用可传数据的 USB 线，关闭占用串口的软件。先让工具尝试自动进入下载模式；失败后再按设备文档操作。",
+    "en": "Use a data-capable USB cable and close any software using the serial port. Let the tool try entering download mode automatically, then follow your device’s instructions if needed."
+  },
+  "flash.help2": {
+    "zh": "请核对具体型号，并按对应文档操作。",
+    "en": "Check your exact model and follow its documentation."
+  },
+  "flash.monoDocs": {
+    "zh": "PaperMono 文档",
+    "en": "PaperMono documentation"
+  },
+  "flash.s3Docs": {
+    "zh": "PaperS3 文档",
+    "en": "PaperS3 documentation"
+  },
+  "flash.noscript": {
+    "zh": "网页刷机需要 JavaScript，也可以下载固件并使用本地工具。",
+    "en": "Web flashing needs JavaScript. You can also download firmware and use a local tool."
+  },
+  "flash.after": {
+    "zh": "刷入之后",
+    "en": "After installation"
+  },
+  "flash.boot": {
+    "zh": "正常开机",
+    "en": "Start your device"
+  },
+  "flash.openStore": {
+    "zh": "打开「应用 → 应用商店」",
+    "en": "Open Apps → App store"
+  },
+  "flash.installApps": {
+    "zh": "连接 Wi-Fi，安装喜欢的应用",
+    "en": "Connect to Wi-Fi and choose an app"
+  },
+  "flash.available": {
+    "zh": "{count} 款可下载",
+    "en": "{count} available"
+  },
+  "flash.pendingCount": {
+    "zh": "{count} 款固件待发布",
+    "en": "{count} awaiting firmware"
+  },
+  "flash.pending": {
+    "zh": "公开固件待发布",
+    "en": "Public firmware coming later"
+  },
+  "flash.testing": {
+    "zh": "测试中",
+    "en": "In testing"
+  },
+  "flash.modelCount": {
+    "zh": "{count} 款",
+    "en": "{count} models"
+  },
+  "flash.testDevice": {
+    "zh": "当前测试设备",
+    "en": "Current test device"
+  },
+  "flash.pendingBadge": {
+    "zh": "当前测试设备 · 固件待发布",
+    "en": "Current test device · Firmware pending"
+  },
+  "flash.pendingNote": {
+    "zh": "新版阅读界面正在实机测试。本站尚未收录匹配的公开固件，发布后提供下载与安装入口。",
+    "en": "The new reading interface is in hardware testing. A matching public firmware image is not yet available here. Downloads will follow its release."
+  },
+  "flash.pendingLink": {
+    "zh": "反馈测试体验",
+    "en": "Share testing feedback"
+  },
+  "flash.spec.papermono": {
+    "zh": "随身阅读 · 触控与按键",
+    "en": "Portable reading · Touch & buttons"
+  },
+  "flash.spec.papers3": {
+    "zh": "大屏触控 · 16 灰阶",
+    "en": "Large touch display · 16 gray levels"
+  },
+  "flash.note.papermono": {
+    "zh": "阅读、应用与聊天已实机体验。内置蜂鸣器不适合音乐播放。",
+    "en": "Reading, apps and chat have been tried on hardware. The built-in buzzer is not intended for music playback."
+  },
+  "flash.note.papers3": {
+    "zh": "显示、触摸、阅读、休眠恢复与应用商店已实机体验。",
+    "en": "Display, touch, reading, sleep/resume and the app store have been tried on hardware."
+  },
+  "flash.supported": {
+    "zh": "浏览器支持 Web Serial。准备好数据线，并关闭占用设备的串口工具。",
+    "en": "This browser supports Web Serial. Prepare a data cable and close other serial tools."
+  },
+  "flash.unsupported": {
+    "zh": "当前浏览器不支持 USB 刷写。请用电脑上的 Chrome / Edge 打开本站；你仍可下载镜像。",
+    "en": "This browser does not support USB flashing. Use desktop Chrome or Edge; manual downloads are still available."
+  },
+  "flash.readyConfirm": {
+    "zh": "请确认型号与备份，再下载固件。",
+    "en": "Confirm your model and backup before downloading."
+  },
+  "flash.manual": {
+    "zh": "已显示该机型的下载文件，可使用本地刷机工具。",
+    "en": "Downloads for this model are available for use with a local flashing tool."
+  },
+  "flash.newBrand": {
+    "zh": "请选择该品牌的具体型号，再确认下载。",
+    "en": "Choose the exact model for this brand before confirming."
+  },
+  "flash.confirmed": {
+    "zh": "已确认。下一步下载并校验固件，尚不会连接设备。",
+    "en": "Confirmed. Next, download and verify the image. Your device is not connected yet."
+  },
+  "flash.downloading": {
+    "zh": "正在下载与校验…",
+    "en": "Downloading & verifying…"
+  },
+  "flash.fetching": {
+    "zh": "正在获取 {model} 固件，网络较慢时请稍候。",
+    "en": "Downloading firmware for {model}. This may take a moment."
+  },
+  "flash.http": {
+    "zh": "下载失败（HTTP {status}），请重试。",
+    "en": "Download failed (HTTP {status}). Please try again."
+  },
+  "flash.verified": {
+    "zh": "SHA-256 校验通过。下一步选择 USB 串口，将立即清除内部闪存并刷写。",
+    "en": "SHA-256 verified. Selecting a USB port in the next step will erase internal flash and install the image."
+  },
+  "flash.retry": {
+    "zh": "重新下载并校验 ↻",
+    "en": "Download & verify again ↻"
+  },
+  "flash.timeout": {
+    "zh": "下载超时，请检查网络后重试。",
+    "en": "The download timed out. Check your connection and try again."
+  },
+  "flash.failed": {
+    "zh": "下载失败，请检查网络后重试。",
+    "en": "The download failed. Check your connection and try again."
+  },
+  "flash.truncated": {
+    "zh": "固件下载不完整，请重新校验。",
+    "en": "The firmware download is incomplete. Please download and verify it again."
+  },
+  "flash.hash": {
+    "zh": "固件校验失败，已阻止刷写。请稍后重试。",
+    "en": "Firmware checksum verification failed. Flashing has been blocked. Please try again."
+  },
+  "flash.connecting": {
+    "zh": "正在连接设备。刷写期间请勿断开 USB 或关闭页面。",
+    "en": "Connecting. Keep USB connected and this page open during installation."
+  },
+  "flash.chip": {
+    "zh": "已识别 {chip}，正在检查支持情况。",
+    "en": "Detected {chip}. Checking compatibility."
+  },
+  "flash.initializing": {
+    "zh": "正在进入下载模式；连接失败请参考下方说明。",
+    "en": "Entering download mode. See the connection instructions if it fails."
+  },
+  "flash.preparing": {
+    "zh": "正在准备已校验的固件。请保持连接。",
+    "en": "Preparing the verified image. Keep the device connected."
+  },
+  "flash.erasing": {
+    "zh": "正在清除设备内部闪存。请勿断开连接。",
+    "en": "Erasing internal flash. Do not disconnect."
+  },
+  "flash.writing": {
+    "zh": "正在刷写 {model} · {percent}%",
+    "en": "Installing on {model} · {percent}%"
+  },
+  "flash.finished": {
+    "zh": "固件已写入。请正常重启设备，再打开「应用 → 应用商店」。若仍在下载模式，请按设备说明退出。",
+    "en": "Firmware written. Restart normally and open Apps → App store. If still in download mode, follow the device’s instructions to exit it."
+  },
+  "flash.failed_initialize": {
+    "zh": "无法进入下载模式。请检查数据线、串口占用，并按下方说明重试。",
+    "en": "Could not enter download mode. Check the cable, close other serial tools and follow the instructions below."
+  },
+  "flash.not_supported": {
+    "zh": "检测到不支持的芯片，已阻止刷写。请核对设备。",
+    "en": "Unsupported chip detected. Flashing was blocked. Check the device model."
+  },
+  "flash.failed_firmware_download": {
+    "zh": "无法读取已校验的固件，请重新下载。",
+    "en": "Could not read the verified firmware. Download it again."
+  },
+  "flash.write_failed": {
+    "zh": "写入失败。请检查连接并重新完整刷写；设备此时可能无法启动。",
+    "en": "Writing failed. Check the connection and repeat the full installation. The device may not boot until it completes."
+  },
+  "flash.flashError": {
+    "zh": "刷写失败，请检查连接后重试。",
+    "en": "Installation failed. Check the connection and try again."
+  },
+  "flash.cancelled": {
+    "zh": "已取消选择端口，未开始刷写。",
+    "en": "Port selection canceled. Installation has not started."
+  },
+  "flash.connectionError": {
+    "zh": "连接或刷写失败。请检查设备与 USB 线后重试；如已开始擦除，需要重新完整刷写。",
+    "en": "Connection or installation failed. Check the USB cable and device. If erasing started, repeat the full installation."
+  },
+  "flash.invalidTarget": {
+    "zh": "无效的刷写目标",
+    "en": "Invalid flashing target"
+  },
+  "faq.title": {
+    "zh": "开始之前",
+    "en": "Before you begin"
+  },
+  "faq.q1": {
+    "zh": "书店推荐会上传我的阅读记录吗？",
+    "en": "Does the bookshop upload my reading history?"
+  },
+  "faq.a1": {
+    "zh": "个人偏好和阅读记录在设备本地参与推荐。书店从在线目录获取书籍信息，你可以调整主题、收藏想读的书，也可以减少不喜欢的内容。",
+    "en": "Preferences and reading history are used locally on your device. The bookshop fetches book information from an online catalog. Adjust your themes, save books to your wish list, or reduce recommendations you dislike."
+  },
+  "faq.q2": {
+    "zh": "为什么切换机型，应用推荐会变化？",
+    "en": "Why do recommendations change with my device?"
+  },
+  "faq.a2": {
+    "zh": "应用有不同的硬件与权限需求。先检查设备能力，再核对应用权限。网页展示新版配置，最终以设备实际检测为准。",
+    "en": "Apps need different hardware and permissions. The store checks capabilities first, then permissions. This site previews newer configurations; the device’s checks are authoritative."
+  },
+  "faq.q3": {
+    "zh": "安装新应用，需要重新刷机吗？",
+    "en": "Do I need to flash firmware for every new app?"
+  },
+  "faq.a3": {
+    "zh": "安装支持应用商店的固件后，可在设备上下载和更新应用。新的系统功能可能需要升级固件，请查看发布说明。",
+    "en": "Once your firmware supports the app store, download and update apps on the device. New system features may require a firmware update; check the release notes."
+  },
+  "faq.q4": {
+    "zh": "能用手机给设备安装固件吗？",
+    "en": "Can I install firmware from my phone?"
+  },
+  "faq.a4": {
+    "zh": "网页刷写需要支持 Web Serial 的桌面版 Chrome 或 Edge。手机或不支持的浏览器可下载文件，再使用电脑安装。",
+    "en": "Web flashing requires desktop Chrome or Edge with Web Serial. You can download files on a phone or another browser, then use a computer to install them."
+  },
+  "faq.q5": {
+    "zh": "应用权限和安装包如何检查？",
+    "en": "How are permissions and packages checked?"
+  },
+  "faq.a5": {
+    "zh": "安装前会列出应用权限，可按需授权。当前开发预览的安装包尚未签名，设备端 HTTPS 证书校验仍待完善，请使用可信目录。网页刷机前核对大小与 SHA-256。",
+    "en": "Review and grant permissions before installation. Development-preview packages are not yet signed and device-side HTTPS certificate validation still needs work; use trusted catalogs. Web flashing verifies image size and SHA-256."
+  },
+  "faq.q6": {
+    "zh": "我也想制作一个应用。",
+    "en": "I would like to make an app."
+  },
+  "faq.a6": {
+    "zh": "欢迎用 Lua 把想法带到墨水屏。应用仓库提供现有包、图标、权限声明与开发说明。",
+    "en": "Bring your idea to e-paper with Lua. The repository includes example packages, icons, permission declarations and development notes."
+  },
+  "faq.develop": {
+    "zh": "查看开发文档",
+    "en": "Read the developer guide"
+  },
+  "contact.title": {
+    "zh": "聊聊你的墨水屏日常。",
+    "en": "Tell us about your e-paper days."
+  },
+  "contact.description": {
+    "zh": "使用反馈、应用想法，或是一次有趣的尝试。",
+    "en": "A little feedback, an app idea, or something you have made."
+  },
+  "contact.wechat": {
+    "zh": "微信联系",
+    "en": "WeChat"
+  },
+  "contact.copy": {
+    "zh": "复制微信号 ↗",
+    "en": "Copy WeChat ID ↗"
+  },
+  "contact.copied": {
+    "zh": "已复制微信号",
+    "en": "WeChat ID copied"
+  },
+  "contact.copyFailed": {
+    "zh": "请长按或选中上方微信号复制",
+    "en": "Select the WeChat ID above and copy it manually"
+  },
+  "footer.tagline": {
+    "zh": "为安静的屏幕，留一点想象。",
+    "en": "A little imagination for a quiet screen."
+  },
+  "footer.forkBefore": {
+    "zh": "基于",
+    "en": "Built on a"
+  },
+  "footer.forkAfter": {
+    "zh": "fork，感谢原项目与开源社区。",
+    "en": "fork. With thanks to the original project and open-source community."
+  },
+  "footer.credits": {
+    "zh": "开源致谢",
+    "en": "Credits"
+  },
+  "footer.preview": {
+    "zh": "社区项目 · 开发预览",
+    "en": "Community project · Development preview"
+  },
+  "credits.title": {
+    "zh": "开源致谢 · CrossStore",
+    "en": "Credits · CrossStore"
+  },
+  "credits.back": {
+    "zh": "回到 CrossStore",
+    "en": "Back to CrossStore"
+  },
+  "credits.heading": {
+    "zh": "开源致谢",
+    "en": "Made possible together."
+  },
+  "credits.intro": {
+    "zh": "CrossStore 基于 CrossMux fork 开发，感谢为阅读器、设备驱动与工具付出心力的开源开发者。",
+    "en": "CrossStore is built on a CrossMux fork. Our thanks to the open-source developers behind its reader, device drivers and tools."
+  },
+  "credits.reader": {
+    "zh": "阅读器与固件基础。",
+    "en": "The reader and firmware foundation."
+  },
+  "credits.sdk": {
+    "zh": "硬件抽象和设备驱动。",
+    "en": "Hardware abstraction and device drivers."
+  },
+  "credits.tools": {
+    "zh": "浏览器串口连接与固件刷写。",
+    "en": "Browser serial connections and firmware installation."
+  },
+  "credits.icons": {
+    "zh": "系统图标基础。应用图标沿用同一套 Bold 轮廓与 256 单位网格。",
+    "en": "The system icon family. App icons follow the same Bold forms and 256-unit grid."
+  },
+  "credits.license": {
+    "zh": "许可",
+    "en": "License"
+  },
+  "credits.note": {
+    "zh": "本网站为社区预览项目，不代表上述项目或设备厂商的官方发布。固件来源与校验值见",
+    "en": "This is a community preview, not an official release from the projects or device manufacturers above. Firmware sources and checksums are in the"
+  },
+  "credits.release": {
+    "zh": "发布记录",
+    "en": "release record"
+  },
+  "credits.end": {
+    "zh": "。设备与应用商标归各自所有者。",
+    "en": ". Device and app trademarks belong to their owners."
+  },
+  "app.weread": {
+    "zh": "微信读书",
+    "en": "WeRead"
+  },
+  "app.airtune": {
+    "zh": "AirTune 电台",
+    "en": "AirTune radio"
+  },
+  "app.game2048": {
+    "zh": "2048",
+    "en": "2048"
+  },
+  "app.gomoku": {
+    "zh": "五子棋",
+    "en": "Gomoku"
+  },
+  "app.calculator": {
+    "zh": "计算器",
+    "en": "Calculator"
+  },
+  "app.sudoku": {
+    "zh": "数独",
+    "en": "Sudoku"
+  },
+  "app.chinese_chess": {
+    "zh": "中国象棋",
+    "en": "Chinese chess"
+  },
+  "app.minesweeper": {
+    "zh": "扫雷",
+    "en": "Minesweeper"
+  },
+  "app.camera": {
+    "zh": "相机",
+    "en": "Camera"
+  },
+  "app.gallery": {
+    "zh": "相册",
+    "en": "Gallery"
+  },
+  "app.rf_chat": {
+    "zh": "LoRa 聊天",
+    "en": "LoRa chat"
+  },
+  "app.wifi_chat": {
+    "zh": "Wi-Fi 聊天",
+    "en": "Wi-Fi chat"
+  },
+  "app.esp_chat": {
+    "zh": "近场聊天",
+    "en": "Nearby chat"
+  },
+  "app.reading_stats": {
+    "zh": "阅读日历",
+    "en": "Reading calendar"
+  },
+  "app.woodfish": {
+    "zh": "木鱼",
+    "en": "Wooden fish"
+  },
+  "app.book_store": {
+    "zh": "书店",
+    "en": "Bookshop"
+  },
+  "app.library": {
+    "zh": "书库",
+    "en": "Library"
+  },
+  "app.standby": {
+    "zh": "待机时钟",
+    "en": "Standby clock"
+  },
+  "app.desc.weread": {
+    "zh": "熟悉的书架，安静地读",
+    "en": "Your familiar bookshelf, quietly."
+  },
+  "app.desc.airtune": {
+    "zh": "电台与收藏，随手听见",
+    "en": "A radio station for the moment."
+  },
+  "app.desc.game2048": {
+    "zh": "数字之间，放松一下",
+    "en": "A little pause between the numbers."
+  },
+  "app.desc.gomoku": {
+    "zh": "黑白落子，自有乐趣",
+    "en": "Five in a row. A moment to play."
+  },
+  "app.desc.calculator": {
+    "zh": "随手计算，不必拿起手机",
+    "en": "A quick calculation, close at hand."
+  },
+  "app.desc.sudoku": {
+    "zh": "一页九宫格，专注片刻",
+    "en": "A small grid. A moment of focus."
+  },
+  "app.desc.chinese_chess": {
+    "zh": "楚河汉界，慢慢思考",
+    "en": "Take your time with the next move."
+  },
+  "app.desc.minesweeper": {
+    "zh": "点开方格，找出答案",
+    "en": "Clear a square, follow a clue."
+  },
+  "app.desc.camera": {
+    "zh": "拍下眼前，留在屏幕里",
+    "en": "Keep a glimpse of the everyday."
+  },
+  "app.desc.gallery": {
+    "zh": "在墨水屏上翻看照片",
+    "en": "Your photographs, in a quieter light."
+  },
+  "app.desc.rf_chat": {
+    "zh": "通过 LoRa，与附近的人聊天",
+    "en": "A conversation over LoRa."
+  },
+  "app.desc.wifi_chat": {
+    "zh": "联网聊天，保持联系",
+    "en": "Stay in touch over Wi-Fi."
+  },
+  "app.desc.esp_chat": {
+    "zh": "用 ESP-NOW 发现身边的伙伴",
+    "en": "Find nearby company with ESP-NOW."
+  },
+  "app.desc.reading_stats": {
+    "zh": "在日历里，回看每一天的阅读",
+    "en": "Look back on your days with books."
+  },
+  "app.desc.woodfish": {
+    "zh": "轻敲一下，留一点安静",
+    "en": "A gentle tap. A little stillness."
+  },
+  "app.desc.book_store": {
+    "zh": "从个人偏好，发现下一本",
+    "en": "A next read that feels like you."
+  },
+  "app.desc.library": {
+    "zh": "整理书籍，回到阅读",
+    "en": "Your books, ready when you are."
+  },
+  "app.desc.standby": {
+    "zh": "让待机的屏幕也有用",
+    "en": "A quiet clock between chapters."
+  },
+  "book.title.59552": {
+    "zh": "2001：太空漫游",
+    "en": "2001: A Space Odyssey"
+  },
+  "book.author.59552": {
+    "zh": "阿瑟·克拉克",
+    "en": "Arthur C. Clarke"
+  },
+  "book.title.34966": {
+    "zh": "星之继承者",
+    "en": "Inherit the Stars"
+  },
+  "book.author.34966": {
+    "zh": "詹姆斯·P.霍根",
+    "en": "James P. Hogan"
+  },
+  "book.title.41888": {
+    "zh": "黑暗森林",
+    "en": "The Dark Forest"
+  },
+  "book.author.41888": {
+    "zh": "刘慈欣",
+    "en": "Liu Cixin"
+  },
+  "book.title.47916": {
+    "zh": "老人与海",
+    "en": "The Old Man and the Sea"
+  },
+  "book.author.47916": {
+    "zh": "海明威",
+    "en": "Ernest Hemingway"
+  },
+  "book.title.35539": {
+    "zh": "小王子",
+    "en": "The Little Prince"
+  },
+  "book.author.35539": {
+    "zh": "圣埃克苏佩里",
+    "en": "Antoine de Saint-Exupéry"
+  },
+  "book.title.42775": {
+    "zh": "人间失格·斜阳",
+    "en": "No Longer Human / The Setting Sun"
+  },
+  "book.author.42775": {
+    "zh": "太宰治",
+    "en": "Osamu Dazai"
+  },
+  "credits.fonts": {
+    "zh": "英文字标与英文版标题。本站自托管页面所需的字体子集。",
+    "en": "Typography for the wordmark and English editorial headings. A subset of the font is hosted locally."
+  },
+  "flash.ackExperimental": {
+    "zh": "我确认设备是 {model}，理解此固件尚未实机验证，已备份并同意清除内部的原固件和设置。",
+    "en": "I confirm this is a {model}, understand this firmware has not been verified on hardware, have made a backup, and agree to erase its existing firmware and internal settings."
+  },
+  "apps.permissionCount.one": {
+    "zh": "1 项权限",
+    "en": "1 permission"
+  }
+}

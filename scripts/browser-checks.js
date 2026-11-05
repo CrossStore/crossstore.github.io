@@ -17,8 +17,51 @@ async (page) => {
       requestPort: async () => { window.serialRequests++; throw new DOMException('Canceled', 'NotFoundError'); },
     }});
   });
+  check(await page.locator('.app-card').count() === 8, 'initial recommendations stay compact');
+  await page.locator('#toggle-apps').click();
+  check(await page.locator('.app-card').count() > 8, 'all matching apps can be expanded');
+  await page.locator('#toggle-apps').click();
+  check(await page.locator('.app-card').count() === 8, 'recommendations collapse without changing filters');
+  // Exercise the two independent recommendation gates and the empty/reset flow.
+  check(await page.locator('[data-app-id="rf_chat"]').count() === 1, 'Mono recommends compatible LoRa app');
+  await page.locator('[data-capability="lora"]').click();
+  check(await page.locator('.app-card').count() === 1, 'LoRa filter narrows compatible apps');
+  await page.locator('[data-app-device="papers3"]').click();
+  check(await page.locator('#empty-results').isVisible(), 'device AND capability must both match');
+  await page.locator('#reset-app-filters').click();
+  check(await page.locator('[data-app-id="camera"]').count() === 0, 'PaperS3 does not recommend camera');
+  await page.locator('[data-app-device="ink4-plus"]').click();
+  await page.locator('[data-capability="camera"]').click();
+  check(await page.locator('[data-app-id="camera"]').count() === 1, 'Ink4 Plus camera capability');
+  await page.locator('.permission-filter summary').click();
+  await page.locator('#permission-options input[value="camera"]').uncheck();
+  check(await page.locator('#empty-results').isVisible(), 'denied camera permission removes result');
+  await page.locator('#reset-app-filters').click();
+  await page.locator('[data-capability="offline"]').click();
+  check(await page.locator('[data-app-id="calculator"]').count() === 1, 'offline includes calculator');
+  check(await page.locator('[data-app-id="weread"]').count() === 0, 'offline excludes WeRead');
+  await page.locator('[data-capability="all"]').click();
+  await page.locator('[data-app-device="papermono"]').click();
+  await page.locator('.permission-filter summary').click();
+  await page.locator('[data-book-topic="literature"]').click();
+  check((await page.locator('#book-shelf').textContent()).includes('老人与海'), 'book preferences change recommendations');
+  await page.locator('[data-book-topic="scifi"]').click();
+  check((await page.locator('#book-shelf').textContent()).includes('太空漫游'), 'science fiction recommendations restore');
+  // Same menu geometry and order drive editor and preview; boundaries are enforced.
+  await page.locator('#menu-choice').selectOption('bookstore');
+  await page.locator('#add-menu').click();
+  check(await page.locator('#menu-items li').count() === 5 && await page.locator('#add-menu').isDisabled(), 'five-entry maximum');
+  for (let i = 0; i < 4; i++) await page.getByRole('button', { name: '上移书店', exact: true }).click();
+  check((await page.locator('#menu-preview > span').first().textContent()) === '书店', 'preview follows reordered menu');
+  check(await page.getByRole('button', { name: '上移书店', exact: true }).isDisabled(), 'first menu entry cannot move up');
+  await page.getByRole('button', { name: '移除阅读日历', exact: true }).click();
+  check(await page.locator('#menu-preview > span').count() === 4 && await page.locator('#add-menu').isEnabled(), 'remove updates preview and frees slot');
+  for (const name of ['书店', '应用', '设置']) await page.getByRole('button', { name: `移除${name}`, exact: true }).click();
+  check(await page.getByRole('button', { name: '移除书架', exact: true }).isDisabled(), 'last menu entry is retained');
+  await page.locator('#reset-menu').click();
+  check(await page.locator('#menu-items li').count() === 4, 'default menu restores');
   const choices = await page.locator('input[name="device"]').evaluateAll(nodes => nodes.map(n => ({ id: n.value, brand: n.closest('.device-card').dataset.brand })));
-  check(choices.length === 13, 'all integrated images must be offered');
+  check(choices.length === 2 && choices.every(choice => ['papers3', 'papermono'].includes(choice.id)), 'only curated published devices must be offered');
   check(await page.locator('.pending-device input').count() === 0, 'pending device must not be selectable for flashing');
   const brands = await page.locator('[data-brand-filter]').evaluateAll(nodes => nodes.map(n => n.dataset.brandFilter));
   check(brands.every(Boolean), 'brand chooser must not offer All');
@@ -49,11 +92,12 @@ async (page) => {
   await page.waitForFunction(() => document.querySelector('#flash-status').textContent.includes('已取消'));
   check(await page.evaluate(() => window.serialRequests) === 1, 'chooser must be called only by connect gesture');
   check(await page.locator('#connect').isEnabled(), 'cancel must allow retry');
-  await page.locator('[data-brand-filter="M5STACK"]').click();
+  await page.locator('[data-brand-filter="METALIO"]').click();
   check(await page.locator('input[name="device"]:checked').count() === 0, 'hidden model selection must clear');
   check(await page.locator('#connect').isHidden() && await page.locator('#prepare').isDisabled(), 'hidden model cannot remain armed');
   check(await page.locator('#download-details').isHidden(), 'hidden model download links must clear');
   check(await page.locator('#flasher-panel').isHidden(), 'brand switch must collapse old confirmation');
+  await page.locator('[data-brand-filter="M5STACK"]').click();
   await page.locator('input[value="papermono"]').check();
   await page.locator('#acknowledge').check();
   await page.locator('#acknowledge').uncheck();
@@ -83,15 +127,16 @@ async (page) => {
   });
   await page.locator('#prepare').click();
   await waiting;
-  await page.locator('[data-brand-filter="WAVESHARE"]').click();
+  await page.locator('[data-brand-filter="METALIO"]').click();
   releaseDownload();
   await page.unroute('**/firmware/papermono-full-install.bin');
   check(await page.locator('#connect').isHidden(), 'stale download must not expose connect');
   check(await page.locator('#prepare').isDisabled(), 'new model must still require confirmation');
   check(await page.locator('input[name="device"]:checked').count() === 0, 'filter must invalidate in-flight download selection');
-  await page.locator('input[value="waveshare-epaper-397"]').check();
-  await page.locator('[data-brand-filter="WAVESHARE"]').click();
-  check(await page.locator('input[value="waveshare-epaper-397"]').isChecked(), 'reselecting the same brand preserves its model');
+  await page.locator('[data-brand-filter="M5STACK"]').click();
+  await page.locator('input[value="papers3"]').check();
+  await page.locator('[data-brand-filter="M5STACK"]').click();
+  check(await page.locator('input[value="papers3"]').isChecked(), 'reselecting the same brand preserves its model');
   check(await page.locator('#flasher-panel').isVisible(), 'same brand keeps confirmation visible');
 
   await page.goto(base);
@@ -100,8 +145,9 @@ async (page) => {
     check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `horizontal overflow at ${width}px`);
   }
   await page.locator('#apps').scrollIntoViewIfNeeded();
-  await page.locator('#screenshots').scrollIntoViewIfNeeded();
+  await page.locator('#bookstore').scrollIntoViewIfNeeded();
   await page.waitForFunction(() => Array.from(document.images).filter(image => image.getClientRects().length).every(image => image.complete && image.naturalWidth > 0));
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.screenshot({ path: 'output/playwright/desktop-verified.png', fullPage: true });
   await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-first-desktop.png' });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -117,6 +163,7 @@ async (page) => {
   check(await page.locator('.pending-device').isVisible(), 'pending Ink4 Plus must follow its brand on mobile');
   await page.locator('#device-choices').screenshot({ path: 'output/playwright/brand-filter-metalio.png' });
   await page.locator('[data-brand-filter="M5STACK"]').click();
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   await page.screenshot({ path: 'output/playwright/mobile-verified.png', fullPage: true });
   check(errors.length === 0, `uncaught page errors: ${errors.join(', ')}`);
 
@@ -136,5 +183,5 @@ async (page) => {
     check(await unsupported.locator('#prepare').isDisabled(), 'unsupported browser cannot download-and-flash');
     check(await unsupported.locator('#download-details').isVisible(), 'unsupported browser needs manual download');
   } finally { await context.close(); }
-  return 'PASS: brand-first progressive disclosure + selection/download reset, 13 firmware downloads, canceled chooser, corrupt download, stale request, 5 collapsed/expanded widths, visible icons, unsupported browser; no physical USB used.';
+  return 'PASS: recommendation capability/permission gates + menu add/reorder/remove/limits + book preferences + brand-first progressive disclosure + selection/download reset, 2 curated firmware downloads, canceled chooser, corrupt download, stale request, 5 collapsed/expanded widths, visible icons, unsupported browser; no physical USB used.';
 }

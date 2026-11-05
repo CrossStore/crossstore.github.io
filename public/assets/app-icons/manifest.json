@@ -1,0 +1,120 @@
+{
+  "style": "Phosphor-compatible Bold",
+  "license": "MIT",
+  "icons": [
+    {
+      "id": "book_store",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "weread",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "game2048",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "gomoku",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "calculator",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "sudoku",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "chinese_chess",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "minesweeper",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "gallery",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "rf_chat",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "wifi_chat",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "esp_chat",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "woodfish",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "library",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "standby",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "appstore",
+      "source": "CrossStore semantic drawing",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "airtune",
+      "source": "Phosphor radio Bold",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "camera",
+      "source": "Phosphor camera Bold",
+      "grid": 256,
+      "stroke": 24
+    },
+    {
+      "id": "reading_stats",
+      "source": "Phosphor calendar-blank Bold",
+      "grid": 256,
+      "stroke": 24
+    }
+  ]
+}
